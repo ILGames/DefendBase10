@@ -57,6 +57,7 @@
   <ItemGroup>
      <Compile Include="Assets\FallScript.cs" />
      <Compile Include="Assets\Spawner.cs" />
+     <Compile Include="Assets\Toggley.cs" />
      <Compile Include="Assets\firstButton.cs" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.4f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
