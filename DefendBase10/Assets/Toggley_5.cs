@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Toggley : MonoBehaviour
+public class Toggley_5 : MonoBehaviour
 {
 	public GameObject switchOn, switchOff;
-	int firstNumber = 0;
+	int fifthNumber = 0;
 
 	void Start(){
 		OnChangeValue();
 	}
 	void Update(){
-		Debug.Log(firstNumber);
+		Debug.Log(fifthNumber);
 	}
 	public void OnChangeValue() {
 		bool onoffSwitch = gameObject.GetComponent<Toggle>().isOn;
@@ -20,13 +20,13 @@ public class Toggley : MonoBehaviour
 		{
 			switchOn.SetActive(true);
 			switchOff.SetActive(false);
-			firstNumber = 1;
+			fifthNumber = 16;
 		}
 		if(!onoffSwitch)
 		{
 			switchOn.SetActive(false);
 			switchOff.SetActive(true);
-			firstNumber = 0;
+			fifthNumber = 0;
 
 		}
 	}
