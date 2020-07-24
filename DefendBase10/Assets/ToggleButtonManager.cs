@@ -18,8 +18,8 @@ public class ToggleButtonManager : MonoBehaviour
     void Update()
     {
         foreach(Toggley btn in buttons)
-	{
+		{
 		buttonValue = btn.value * (int)Math.Pow(2, btn.digitNum);
-	}
+		}
     }
 }
