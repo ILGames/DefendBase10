@@ -591,7 +591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a4b1684487a14b47b80cccae0afa9ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  digitNum: 0
+  digitNum: 1
   switchOn: {fileID: 60320331}
   switchOff: {fileID: 1970700818}
   value: 0
@@ -783,7 +783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a4b1684487a14b47b80cccae0afa9ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  digitNum: 0
+  digitNum: 5
   switchOn: {fileID: 1418869744}
   switchOff: {fileID: 281497607}
   value: 0
@@ -1344,7 +1344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a4b1684487a14b47b80cccae0afa9ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  digitNum: 0
+  digitNum: 2
   switchOn: {fileID: 421145334}
   switchOff: {fileID: 1663612442}
   value: 0
@@ -1458,7 +1458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a4b1684487a14b47b80cccae0afa9ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  digitNum: 0
+  digitNum: 4
   switchOn: {fileID: 510117332}
   switchOff: {fileID: 646845256}
   value: 0
@@ -1572,7 +1572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a4b1684487a14b47b80cccae0afa9ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  digitNum: 0
+  digitNum: 3
   switchOn: {fileID: 1565564719}
   switchOff: {fileID: 215052857}
   value: 0
