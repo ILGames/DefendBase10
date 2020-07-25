@@ -11,15 +11,20 @@ public class ToggleButtonManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Debug.Log("Num Buttons = " + buttons.Length);
     }
 
     // Update is called once per frame
     void Update()
     {
+	int tempValue = 0;
         foreach(Toggley btn in buttons)
 	{
-		buttonValue = btn.value * (int)Math.Pow(2, btn.digitNum);
+		int digitValue = (int)Math.Pow(2, btn.digitNum);
+		int newValue = btn.value * digitValue;
+		Debug.Log("Value of digit " + btn.digitNum + " is " + btn.value);
+		tempValue = tempValue + newValue;
 	}
+	buttonValue = tempValue;
     }
 }
