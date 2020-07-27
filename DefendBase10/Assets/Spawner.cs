@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
 
-    public GameObject[] enemies;
+    public GameObject enemy;
     public Vector3 spawnValues;
     public float spawnWait;
     public float spawnMostWait;
@@ -34,7 +34,11 @@ public class Spawner : MonoBehaviour
 
             Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), 0, 0);
 
-            Instantiate(enemies[randEnemy], spawnPosition + transform.TransformPoint (402, 2110, -197), gameObject.transform.rotation);
+            GameObject newShip = Instantiate(enemy, Vector3.zero, transform.rotation);
+            newShip.transform.SetParent(transform);
+            TextMesh shipText = newShip.transform.Find("Text");
+            shipText.text = ""+Random.Range(0, 64);
+            // Debug.Log("spawner at "+transform.position.z+" ship at "+newShip.transform.position.z);
 
             yield return new WaitForSeconds(spawnWait);
         }
