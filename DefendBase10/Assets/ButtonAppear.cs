@@ -13,6 +13,7 @@ public class ButtonAppear : MonoBehaviour{
 	GameObject Button_4 = GameObject.Find("Button_4");
 	GameObject Button_5 = GameObject.Find("Button_5");
 	GameObject Button_6 = GameObject.Find("Button_6");
+
 	void start() 
 	{
 		levelPassed = PlayerPrefs.GetInt ("LevelPassed");
