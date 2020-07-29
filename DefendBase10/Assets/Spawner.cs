@@ -34,7 +34,7 @@ public class Spawner : MonoBehaviour
 
             Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), 0, 0);
 
-            GameObject newShip = Instantiate(enemy, Vector3.zero, transform.rotation);
+            GameObject newShip = Instantiate(enemy, transform.position, transform.rotation);
             newShip.transform.SetParent(transform);
             Transform shipText = newShip.transform.Find("Text");
             TextMesh meshComponent = shipText.gameObject.GetComponent<TextMesh>();
