@@ -18,21 +18,21 @@ public class ButtonAppear : MonoBehaviour{
 	{
 
         Button_2 = GameObject.Find("Button_2");
+	toggle2.interactable = false;
         Button_3 = GameObject.Find("Button_3");
+	toggle3.interactable = false;
         Button_4 = GameObject.Find("Button_4");
+	toggle4.interactable = false;
         Button_5 = GameObject.Find("Button_5");
+	toggle5.interactable = false;
         Button_6 = GameObject.Find("Button_6");
+	toggle6.interactable = false;
 
         levelPassed = PlayerPrefs.GetInt ("LevelPassed");
-		toggle2.interactable = false;
 		Button_2.GetComponent<Renderer>().enabled = false;
-		toggle3.interactable = false;
 		Button_3.GetComponent<Renderer>().enabled = false;
-		toggle4.interactable = false;
 		Button_4.GetComponent<Renderer>().enabled = false;
-		toggle5.interactable = false;
 		Button_5.GetComponent<Renderer>().enabled = false;
-		toggle6.interactable = false;
 		Button_6.GetComponent<Renderer>().enabled = false;		
 
 
