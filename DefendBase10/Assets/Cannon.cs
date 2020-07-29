@@ -11,11 +11,11 @@ public class Cannon : MonoBehaviour
     {
        	ShipValue valueScript = GetComponent<ShipValue>();
        	ToggleButtonManager buttonValue = GetComponent<ToggleButtonManager>();
+        GameObject ship = GameObject.Find("" + valueScript.value);
 
         if (valueScript.value == buttonValue.buttonValue)
         {
-            GameObject destroyShip = GameObject.Find("" + valueScript.value);
-            Destroy(destroyShip);
+            Destroy(ship);
         }
     }
 }
