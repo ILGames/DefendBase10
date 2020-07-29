@@ -30,16 +30,14 @@ public class Spawner : MonoBehaviour
 
         while (true)
         {
-            randEnemy = Random.Range(0, 10);
+            Vector3 spawnPosition = new Vector3(Random.Range(2456, spawnValues.x), 2781, 17853);
 
-            Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), 0, 0);
-
-            GameObject newShip = Instantiate(enemy, Vector3.zero, transform.rotation);
+            GameObject newShip = Instantiate(enemy, spawnPosition, transform.rotation);
             newShip.transform.SetParent(transform);
             Transform shipText = newShip.transform.Find("Text");
             TextMesh meshComponent = shipText.gameObject.GetComponent<TextMesh>();
             meshComponent.text = ""+Random.Range(0, 64);
-            // Debug.Log("spawner at "+transform.position.z+" ship at "+newShip.transform.position.z);
+            Debug.Log("spawner at "+transform.position.x+" ship at "+newShip.transform.position.x);
 
             yield return new WaitForSeconds(spawnWait);
         }
