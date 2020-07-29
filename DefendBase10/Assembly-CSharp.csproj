@@ -60,6 +60,7 @@
      <Compile Include="Assets\DialogueManager.cs" />
      <Compile Include="Assets\DialogueTrigger.cs" />
      <Compile Include="Assets\FallScript.cs" />
+     <Compile Include="Assets\ShipValue.cs" />
      <Compile Include="Assets\Spawner.cs" />
      <Compile Include="Assets\ToggleButtonManager.cs" />
      <Compile Include="Assets\Toggley.cs" />
