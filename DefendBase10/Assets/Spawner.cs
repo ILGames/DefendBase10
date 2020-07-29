@@ -14,8 +14,11 @@ public class Spawner : MonoBehaviour
 
     int randEnemy;
 
+    public Dictionary<int, List<GameObject>> ships;
+
     void Start()
     {
+        ships = new Dictionary<int, List<GameObject>>();
         StartCoroutine(waitSpawner());
     }
 
@@ -34,10 +37,18 @@ public class Spawner : MonoBehaviour
 
             GameObject newShip = Instantiate(enemy, spawnPosition, transform.rotation);
             newShip.transform.SetParent(transform);
-            Transform shipText = newShip.transform.Find("Text");
-            TextMesh meshComponent = shipText.gameObject.GetComponent<TextMesh>();
-            meshComponent.text = ""+Random.Range(0, 64);
-            Debug.Log("spawner at "+transform.position.x+" ship at "+newShip.transform.position.x);
+            ShipValue valueScript = newShip.GetComponent<ShipValue>();
+            valueScript.RandomizeValue(64);
+            if (ships.ContainsKey(valueScript.value))
+            {
+                ships[valueScript.value].Add(newShip);
+            }
+            else
+            {
+                ships[valueScript.value] = new List<GameObject>() { newShip };
+            }
+            newShip.name = "" + valueScript.value;
+            Debug.Log("new ship # = "+ valueScript.value);
 
             yield return new WaitForSeconds(spawnWait);
         }
