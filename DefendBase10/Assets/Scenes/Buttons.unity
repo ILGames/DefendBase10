@@ -953,8 +953,8 @@ GameObject:
   m_Component:
   - component: {fileID: 375569945}
   - component: {fileID: 375569946}
-  - component: {fileID: 375569947}
   - component: {fileID: 375569948}
+  - component: {fileID: 375569947}
   m_Layer: 0
   m_Name: ControlPanel
   m_TagString: Untagged
@@ -1016,16 +1016,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 375569944}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd649932c8f1343238948465239188ab, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d9166669d1084a15a1752ae20035506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toggle1: {fileID: 214441860}
-  toggle2: {fileID: 243750154}
-  toggle3: {fileID: 991275608}
-  toggle4: {fileID: 1169877536}
-  toggle5: {fileID: 1035951204}
-  toggle6: {fileID: 336880162}
-  levelPassed: 0
+  buttons:
+  - {fileID: 214441859}
+  - {fileID: 243750153}
+  - {fileID: 991275607}
+  - {fileID: 1169877535}
+  - {fileID: 1035951203}
+  - {fileID: 336880161}
+  buttonsOn:
+    ButtonsAnimated: 0
 --- !u!95 &375569948
 Animator:
   serializedVersion: 3

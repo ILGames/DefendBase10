@@ -188,6 +188,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ship 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8743387523668677879, guid: a8cbfb1e6dcd03b41a6edcca07e761d3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
 --- !u!1 &1306593193
@@ -418,6 +423,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b35c114cce7eab441a4e860150b1ac15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waves:
+  - name: First Wave
+    enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+    count: 5
+    rate: 1
+  - name: Second Wave
+    enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+    count: 4
+    rate: 1
   enemy: {fileID: 8743387523668677879, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
   spawnValues: {x: 3295, y: 0, z: 0}
   spawnWait: 0
