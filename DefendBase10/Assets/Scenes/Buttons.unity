@@ -1026,8 +1026,7 @@ MonoBehaviour:
   - {fileID: 1169877535}
   - {fileID: 1035951203}
   - {fileID: 336880161}
-  buttonsOn:
-    ButtonsAnimated: 0
+  buttonsAnimated: 0
 --- !u!95 &375569948
 Animator:
   serializedVersion: 3
