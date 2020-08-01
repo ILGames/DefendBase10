@@ -18,7 +18,7 @@ public class ButtonAppear : MonoBehaviour{
 	{
 
         Button_2 = GameObject.Find("Button_2");
-	toggle2.interactable = false;
+	toggle2.interactable = true;
         Button_3 = GameObject.Find("Button_3");
 	toggle3.interactable = true;
         Button_4 = GameObject.Find("Button_4");

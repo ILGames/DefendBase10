@@ -57,6 +57,7 @@
   <ItemGroup>
      <Compile Include="Assets\ButtonAppear.cs" />
      <Compile Include="Assets\ButtonsOnScreen.cs" />
+     <Compile Include="Assets\ButtonsOnScreen1.cs" />
      <Compile Include="Assets\Cannon.cs" />
      <Compile Include="Assets\Dialogue.cs" />
      <Compile Include="Assets\DialogueManager.cs" />
