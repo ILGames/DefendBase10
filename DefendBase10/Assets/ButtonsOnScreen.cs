@@ -18,7 +18,7 @@ public class ButtonsOnScreen : MonoBehaviour
 	for(int index = 0; index <buttons.Length; index++)
 	{
 		toggley = buttons[index];
-		Debug.Log("Toggley.gameObject" + toggley.gameObject);
+		//Debug.Log("Toggley.gameObject" + toggley.gameObject);
 		Toggle toggle = toggley.gameObject.GetComponent<Toggle>();
 		if (toggle.interactable)
 		{
