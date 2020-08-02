@@ -166,7 +166,7 @@ PrefabInstance:
     - target: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3,
         type: 3}
@@ -191,7 +191,7 @@ PrefabInstance:
     - target: {fileID: 8743387523668677879, guid: a8cbfb1e6dcd03b41a6edcca07e761d3,
         type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
@@ -287,7 +287,7 @@ Transform:
   m_LocalScale: {x: 105.32279, y: 105.32279, z: 105.32279}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1306593198
 MonoBehaviour:
@@ -392,7 +392,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 65.130005, y: -88.467, z: -45.852}
 --- !u!1 &1418795539
 GameObject:
@@ -475,7 +475,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1 &1478399937
 GameObject:
@@ -524,5 +524,283 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2120978631
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2120978633}
+  - component: {fileID: 2120978632}
+  m_Layer: 0
+  m_Name: Game
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2120978632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120978631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5b9a2a4f29e0481f906c6ed0541c837, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - name: Wave 0
+    enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+    count: 5
+    rate: 0
+    level: 1
+    digits: 1
+    maxspawn: 3
+    minspawn: 2
+  - name: Wave 1
+    enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+    count: 7
+    rate: 0
+    level: 2
+    digits: 2
+    maxspawn: 4
+    minspawn: 2.4
+  - name: 
+    enemy: {fileID: 0}
+    count: 0
+    rate: 0
+    level: 0
+    digits: 0
+    maxspawn: 0
+    minspawn: 0
+  - name: 
+    enemy: {fileID: 0}
+    count: 0
+    rate: 0
+    level: 0
+    digits: 0
+    maxspawn: 0
+    minspawn: 0
+  - name: 
+    enemy: {fileID: 0}
+    count: 0
+    rate: 0
+    level: 0
+    digits: 0
+    maxspawn: 0
+    minspawn: 0
+  - name: 
+    enemy: {fileID: 0}
+    count: 0
+    rate: 0
+    level: 0
+    digits: 0
+    maxspawn: 0
+    minspawn: 0
+  - name: 
+    enemy: {fileID: 0}
+    count: 0
+    rate: 0
+    level: 0
+    digits: 0
+    maxspawn: 0
+    minspawn: 0
+  - name: 
+    enemy: {fileID: 0}
+    count: 0
+    rate: 0
+    level: 0
+    digits: 0
+    maxspawn: 0
+    minspawn: 0
+  - name: 
+    enemy: {fileID: 0}
+    count: 0
+    rate: 0
+    level: 0
+    digits: 0
+    maxspawn: 0
+    minspawn: 0
+  - name: 
+    enemy: {fileID: 0}
+    count: 0
+    rate: 0
+    level: 0
+    digits: 0
+    maxspawn: 0
+    minspawn: 0
+  - name: 
+    enemy: {fileID: 0}
+    count: 0
+    rate: 0
+    level: 0
+    digits: 0
+    maxspawn: 0
+    minspawn: 0
+  - name: 
+    enemy: {fileID: 0}
+    count: 0
+    rate: 0
+    level: 0
+    digits: 0
+    maxspawn: 0
+    minspawn: 0
+  - name: 
+    enemy: {fileID: 0}
+    count: 0
+    rate: 0
+    level: 0
+    digits: 0
+    maxspawn: 0
+    minspawn: 0
+  - name: 
+    enemy: {fileID: 0}
+    count: 0
+    rate: 0
+    level: 0
+    digits: 0
+    maxspawn: 0
+    minspawn: 0
+  - name: 
+    enemy: {fileID: 0}
+    count: 0
+    rate: 0
+    level: 0
+    digits: 0
+    maxspawn: 0
+    minspawn: 0
+  - name: 
+    enemy: {fileID: 0}
+    count: 0
+    rate: 0
+    level: 0
+    digits: 0
+    maxspawn: 0
+    minspawn: 0
+  - name: 
+    enemy: {fileID: 0}
+    count: 0
+    rate: 0
+    level: 0
+    digits: 0
+    maxspawn: 0
+    minspawn: 0
+  - name: 
+    enemy: {fileID: 0}
+    count: 0
+    rate: 0
+    level: 0
+    digits: 0
+    maxspawn: 0
+    minspawn: 0
+  - name: 
+    enemy: {fileID: 0}
+    count: 0
+    rate: 0
+    level: 0
+    digits: 0
+    maxspawn: 0
+    minspawn: 0
+  - name: 
+    enemy: {fileID: 0}
+    count: 0
+    rate: 0
+    level: 0
+    digits: 0
+    maxspawn: 0
+    minspawn: 0
+  - name: 
+    enemy: {fileID: 0}
+    count: 0
+    rate: 0
+    level: 0
+    digits: 0
+    maxspawn: 0
+    minspawn: 0
+  - name: 
+    enemy: {fileID: 0}
+    count: 0
+    rate: 0
+    level: 0
+    digits: 0
+    maxspawn: 0
+    minspawn: 0
+  - name: 
+    enemy: {fileID: 0}
+    count: 0
+    rate: 0
+    level: 0
+    digits: 0
+    maxspawn: 0
+    minspawn: 0
+  - name: 
+    enemy: {fileID: 0}
+    count: 0
+    rate: 0
+    level: 0
+    digits: 0
+    maxspawn: 0
+    minspawn: 0
+  - name: 
+    enemy: {fileID: 0}
+    count: 0
+    rate: 0
+    level: 0
+    digits: 0
+    maxspawn: 0
+    minspawn: 0
+  - name: 
+    enemy: {fileID: 0}
+    count: 0
+    rate: 0
+    level: 0
+    digits: 0
+    maxspawn: 0
+    minspawn: 0
+  - name: 
+    enemy: {fileID: 0}
+    count: 0
+    rate: 0
+    level: 0
+    digits: 0
+    maxspawn: 0
+    minspawn: 0
+  - name: 
+    enemy: {fileID: 0}
+    count: 0
+    rate: 0
+    level: 0
+    digits: 0
+    maxspawn: 0
+    minspawn: 0
+  - name: 
+    enemy: {fileID: 0}
+    count: 0
+    rate: 0
+    level: 0
+    digits: 0
+    maxspawn: 0
+    minspawn: 0
+  timeBetweenWaves: 5
+  waveCountdown: 0
+--- !u!4 &2120978633
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120978631}
+  m_LocalRotation: {x: 0.5842143, y: -0.39124128, z: 0.11059918, w: 0.7024185}
+  m_LocalPosition: {x: 2286, y: 4371, z: 2123}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
