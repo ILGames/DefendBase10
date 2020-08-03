@@ -63,20 +63,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ButtonAppear.cs" />
-    <Compile Include="Assets\ButtonsOnScreen.cs" />
-    <Compile Include="Assets\Cannon.cs" />
-    <Compile Include="Assets\Dialogue.cs" />
-    <Compile Include="Assets\DialogueManager.cs" />
-    <Compile Include="Assets\DialogueTrigger.cs" />
-    <Compile Include="Assets\FallScript.cs" />
-    <Compile Include="Assets\MainMenu.cs" />
-    <Compile Include="Assets\PauseMenu.cs" />
-    <Compile Include="Assets\ShipValue.cs" />
-    <Compile Include="Assets\Spawner.cs" />
-    <Compile Include="Assets\ToggleButtonManager.cs" />
-    <Compile Include="Assets\Toggley.cs" />
-    <Compile Include="Assets\WaveSpawner.cs" />
+    <Compile Include="Assets\Scripts\ButtonAppear.cs" />
+    <Compile Include="Assets\Scripts\ButtonsOnScreen.cs" />
+    <Compile Include="Assets\Scripts\Cannon.cs" />
+    <Compile Include="Assets\Scripts\Dialogue.cs" />
+    <Compile Include="Assets\Scripts\DialogueManager.cs" />
+    <Compile Include="Assets\Scripts\DialogueTrigger.cs" />
+    <Compile Include="Assets\Scripts\FallScript.cs" />
+    <Compile Include="Assets\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\ShipValue.cs" />
+    <Compile Include="Assets\Scripts\Spawner.cs" />
+    <Compile Include="Assets\Scripts\ToggleButtonManager.cs" />
+    <Compile Include="Assets\Scripts\Toggley.cs" />
+    <Compile Include="Assets\Scripts\WaveBar.cs" />
+    <Compile Include="Assets\Scripts\WaveSpawner.cs" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Hub/Editor/2019.4.4f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
