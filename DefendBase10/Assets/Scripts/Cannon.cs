@@ -5,15 +5,11 @@ using System.Security.Cryptography;
 using UnityEngine;
 
 
-
-public float fireWait;
-public float fireMostWait;
-public float fireLeastWait;
-
-
 public class Cannon : MonoBehaviour
 {
     public Transform spawner;
+    public float startWait = 2f;
+    public float fireWait = 1f;
 
     void Start()
     {
@@ -21,9 +17,9 @@ public class Cannon : MonoBehaviour
     }
 
     void Update() 
-    {
-     fireWait = Random.Range(fireLeastWait, fireMostWait);    
+    {   
     }
+
     public void Fire()
     {
         GameObject ctrlPanel = GameObject.Find("ControlPanel");
@@ -37,17 +33,17 @@ public class Cannon : MonoBehaviour
                 Destroy(child.gameObject);
             }
         }
-
-        GameObject cannon = GamdObject.Find("Cannon");
     }
 
     IEnumerator waitFire()
     {
         yield return new WaitForSeconds(startWait);
 
-        if (fireWait == true) 
+        while (true)
         {
             Fire();
+
+            yield return new WaitForSeconds(fireWait);
         }
     }
  }
