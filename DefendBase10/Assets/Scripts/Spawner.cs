@@ -12,7 +12,7 @@ public class Spawner : MonoBehaviour
     public float spawnLeastWait;
     public int startWait;
 
-    int randEnemy;
+
 
     public Dictionary<int, List<GameObject>> ships;
 
@@ -27,11 +27,6 @@ public class Spawner : MonoBehaviour
 
         GameObject controlPanel = GameObject.Find("ControlPanel");
         buttonsShowing = controlPanel.GetComponent<ButtonsOnScreen>();
-    }
-
-    void Update()
-    {
-        
     }
 
     IEnumerator waitSpawner()
@@ -57,7 +52,7 @@ public class Spawner : MonoBehaviour
                 ships[valueScript.value] = new List<GameObject>() { newShip };
             }
             newShip.name = "" + valueScript.value;
-            Debug.Log("new ship # = "+ valueScript.value);
+            //Debug.Log("new ship # = "+ valueScript.value);
 
             spawnWait = Random.Range(spawnLeastWait, spawnMostWait);
 
