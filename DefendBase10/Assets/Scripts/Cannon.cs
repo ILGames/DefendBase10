@@ -1,18 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Security.Cryptography;
 using UnityEngine;
 
+
+
+public float fireWait;
+public float fireMostWait;
+public float fireLeastWait;
 
 
 public class Cannon : MonoBehaviour
 {
     public Transform spawner;
 
-    void Update()
+    void Start()
     {
-        Fire();
+        StartCoroutine(waitFire());
     }
 
+    void Update() 
+    {
+     fireWait = Random.Range(fireLeastWait, fireMostWait);    
+    }
     public void Fire()
     {
         GameObject ctrlPanel = GameObject.Find("ControlPanel");
@@ -26,15 +37,17 @@ public class Cannon : MonoBehaviour
                 Destroy(child.gameObject);
             }
         }
-        /*
-       	ShipValue valueScript = GetComponent<ShipValue>();
-       	
-        GameObject ship = GameObject.Find("" + valueScript.value);
 
-        if (valueScript.value == buttonValue.buttonValue)
-        {
-            Destroy(ship);
-        }
-        */
+        GameObject cannon = GamdObject.Find("Cannon");
     }
-}
+
+    IEnumerator waitFire()
+    {
+        yield return new WaitForSeconds(startWait);
+
+        if (fireWait == true) 
+        {
+            Fire();
+        }
+    }
+ }
