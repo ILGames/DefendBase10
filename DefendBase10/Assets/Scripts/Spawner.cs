@@ -42,7 +42,7 @@ public class Spawner : MonoBehaviour
         {
             maxNum = 2^(buttonsShowing.buttonsAnimated-1);
 
-            Vector3 spawnPosition = new Vector3(Random.Range(2456, spawnValues.x), 2781, 17853);
+            Vector3 spawnPosition = new Vector3(Random.Range(2456, spawnValues.x), 2650, 17853);
 
             GameObject newShip = Instantiate(enemy, spawnPosition, transform.rotation);
             newShip.transform.SetParent(transform);
