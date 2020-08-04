@@ -9,7 +9,7 @@ public class Cannon : MonoBehaviour
 {
     public Transform spawner;
     public float startWait = 2f;
-    public float fireWait = 1f;
+    public float fireWait = 5f;
 
     void Start()
     {

@@ -131,7 +131,7 @@ PrefabInstance:
     - target: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1344
+      value: 2072
       objectReference: {fileID: 0}
     - target: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3,
         type: 3}
@@ -187,11 +187,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ship 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8743387523668677879, guid: a8cbfb1e6dcd03b41a6edcca07e761d3,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
@@ -302,6 +297,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawner: {fileID: 1478399939}
+  startWait: 2
+  fireWait: 5
 --- !u!1 &1357632990
 GameObject:
   m_ObjectHideFlags: 0
