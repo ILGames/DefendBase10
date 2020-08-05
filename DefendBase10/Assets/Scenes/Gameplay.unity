@@ -188,6 +188,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ship 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8743387523668677879, guid: a8cbfb1e6dcd03b41a6edcca07e761d3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
 --- !u!1001 &240142351
@@ -853,6 +858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawner: {fileID: 1478399939}
+  pivot: {fileID: 2134619372}
   startWait: 4
   fireWait: 10
 --- !u!1 &2120978631
@@ -1133,3 +1139,9 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &2134619372 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3237524263138951245, guid: 5b22f533f43f64f3ca162067c7c10cb0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1767820761}
+  m_PrefabAsset: {fileID: 0}

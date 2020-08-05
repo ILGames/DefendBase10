@@ -12,17 +12,12 @@ public class Spawner : MonoBehaviour
     public float spawnLeastWait;
     public int startWait;
 
-
-
-    public Dictionary<int, List<GameObject>> ships;
-
     int maxNum = 2;
 
     ButtonsOnScreen buttonsShowing;
 
     void Start()
     {
-        ships = new Dictionary<int, List<GameObject>>();
         StartCoroutine(waitSpawner());
 
         GameObject controlPanel = GameObject.Find("ControlPanel");
@@ -43,14 +38,7 @@ public class Spawner : MonoBehaviour
             newShip.transform.SetParent(transform);
             ShipValue valueScript = newShip.GetComponent<ShipValue>();
             valueScript.RandomizeValue(maxNum);
-            if (ships.ContainsKey(valueScript.value))
-            {
-                ships[valueScript.value].Add(newShip);
-            }
-            else
-            {
-                ships[valueScript.value] = new List<GameObject>() { newShip };
-            }
+            
             newShip.name = "" + valueScript.value;
             //Debug.Log("new ship # = "+ valueScript.value);
 

@@ -8,6 +8,7 @@ using UnityEngine;
 public class Cannon : MonoBehaviour
 {
     public Transform spawner;
+    public Transform pivot;
     public float startWait = 2f;
     public float fireWait = 5f;
 
@@ -26,11 +27,23 @@ public class Cannon : MonoBehaviour
         ToggleButtonManager buttonValue = ctrlPanel.GetComponent<ToggleButtonManager>();
         //Debug.Log("Button ="+buttonValue.buttonValue);
 
+        float lowY = 999999999;
+        GameObject lowest = null;
+
         foreach (Transform child in spawner)
         {
             if (child.gameObject.name == "" + buttonValue.buttonValue)
             {
-                Destroy(child.gameObject);
+                if( child.gameObject.transform.position.y < lowY && child.gameObject.transform.position.y > transform.position.y)
+                {
+                    lowest = child.gameObject;
+                    lowY = child.gameObject.transform.position.y;
+                }
+            }
+
+            if (lowest != null)
+            {
+                KillShip(lowest);
             }
         }
     }
@@ -45,5 +58,14 @@ public class Cannon : MonoBehaviour
 
             yield return new WaitForSeconds(fireWait);
         }
+    }
+
+    void KillShip(GameObject ship)
+    {
+        pivot.LookAt(ship.transform, new Vector3(0f,1f,0f));
+        Debug.Log("Shooting Ship At");
+        Debug.Log(ship.transform.position);
+        Debug.Log(ship.transform.localPosition);
+        Destroy(ship);
     }
  }
