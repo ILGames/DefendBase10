@@ -12,23 +12,43 @@ public class Spawner : MonoBehaviour
     public float spawnLeastWait;
     public int startWait;
 
+    bool on = false;
+
     int maxNum = 2;
+    IEnumerator coroutine;
 
     ButtonsOnScreen buttonsShowing;
 
     void Start()
     {
-        StartCoroutine(waitSpawner());
-
         GameObject controlPanel = GameObject.Find("ControlPanel");
         buttonsShowing = controlPanel.GetComponent<ButtonsOnScreen>();
+    }
+
+    public void StopSpawning()
+    {
+        Debug.Log("turning off spawner");
+        on = false;
+        if (coroutine != null)
+        {
+            StopCoroutine(coroutine);
+            coroutine = null;
+        }
+    }
+
+    public void StartSpawning()
+    {
+        Debug.Log("turning on spawner");
+        on = true;
+        coroutine = waitSpawner();
+        StartCoroutine(coroutine);
     }
 
     IEnumerator waitSpawner()
     {
         yield return new WaitForSeconds(startWait);
 
-        while (true)
+        while (on)
         {
             maxNum = 2^(buttonsShowing.buttonsAnimated-1);
 
