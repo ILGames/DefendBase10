@@ -62,10 +62,7 @@ public class Cannon : MonoBehaviour
 
     void KillShip(GameObject ship)
     {
-        pivot.LookAt(ship.transform, new Vector3(0f,1f,0f));
-        Debug.Log("Shooting Ship At");
-        Debug.Log(ship.transform.position);
-        Debug.Log(ship.transform.localPosition);
-        Destroy(ship);
+        pivot.LookAt(ship.transform.position, new Vector3(0f,1f,0f));
+        ship.GetComponent<Death>().Die();
     }
  }
