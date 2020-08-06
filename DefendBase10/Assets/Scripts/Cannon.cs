@@ -39,7 +39,7 @@ public class Cannon : MonoBehaviour
                 if (child.position.y < lowY && child.position.y > transform.position.y)
                 {
                     lowest = child.gameObject;
-                    lowY = child.gameObject.transform.position.y;
+                    lowY = child.position.y;
                 }
             }
 
@@ -64,7 +64,7 @@ public class Cannon : MonoBehaviour
 
     void KillShip(GameObject ship)
     {
-        pivot.LookAt(ship.transform.position, new Vector3(0f, 1f, 0f));
+        pivot.LookAt(ship.transform.position);
         ship.GetComponent<Death>().Die();
     }
  }
