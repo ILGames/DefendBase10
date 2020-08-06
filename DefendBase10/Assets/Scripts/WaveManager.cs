@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaveSpawner : MonoBehaviour
-{
-    //Store values 
-    public enum SpawnState { SPAWNING, WAITING, COUNTING};
+public class WaveManager : MonoBehaviour
+{ 
+
 
     [System.Serializable]
     public class Wave
@@ -14,7 +13,6 @@ public class WaveSpawner : MonoBehaviour
         //Reference to prefab we want to instantiate at our spawnpoints
         public Transform enemy;
         public float lengthOfTime;
-        public float rate;
         public int level;
         public int digits;
         public float maxspawn;
@@ -30,9 +28,8 @@ public class WaveSpawner : MonoBehaviour
     public float waveCountdown;
     public float timeBetweenWaves = 4f;
 
-    private float searchCountdown = 1f;
 
-    private SpawnState state = SpawnState.COUNTING;
+
 
     void Start()
     {
@@ -54,7 +51,6 @@ public class WaveSpawner : MonoBehaviour
         spawner.StopSpawning();
         waveCountdown = waves[currentWave].lengthOfTime;
 
-        state = SpawnState.COUNTING;
 
         if(currentWave + 1 > waves.Length -1)
         {
@@ -66,8 +62,8 @@ public class WaveSpawner : MonoBehaviour
         }
         else
         {
-            currentWave++;
             StartCoroutine(waitToBeginNextWave());
+            currentWave++;
         }
         
     }
