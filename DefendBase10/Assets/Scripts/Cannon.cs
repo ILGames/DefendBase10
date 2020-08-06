@@ -12,19 +12,21 @@ public class Cannon : MonoBehaviour
     public float startWait = 2f;
     public float fireWait = 5f;
 
+
     void Start()
     {
         StartCoroutine(waitFire());
     }
 
-    void Update() 
-    {   
+    void Update()
+    {
     }
 
     public void Fire()
     {
         GameObject ctrlPanel = GameObject.Find("ControlPanel");
         ToggleButtonManager buttonValue = ctrlPanel.GetComponent<ToggleButtonManager>();
+        GameObject buildings = GameObject.Find("Buildings");
         //Debug.Log("Button ="+buttonValue.buttonValue);
 
         float lowY = 999999999;
@@ -34,7 +36,7 @@ public class Cannon : MonoBehaviour
         {
             if (child.gameObject.name == "" + buttonValue.buttonValue)
             {
-                if( child.gameObject.transform.position.y < lowY && child.gameObject.transform.position.y > transform.position.y)
+                if (child.gameObject.transform.position.y < lowY && child.gameObject.transform.position.y > transform.position.y)
                 {
                     lowest = child.gameObject;
                     lowY = child.gameObject.transform.position.y;
@@ -44,6 +46,12 @@ public class Cannon : MonoBehaviour
             if (lowest != null)
             {
                 KillShip(lowest);
+            }
+
+            if (child.gameObject.transform.y < gameObject.y) 
+            {
+                KillShip();
+                child.buildings.SetActive(false);
             }
         }
     }
@@ -62,7 +70,7 @@ public class Cannon : MonoBehaviour
 
     void KillShip(GameObject ship)
     {
-        pivot.LookAt(ship.transform.position, new Vector3(0f,1f,0f));
+        pivot.LookAt(ship.transform.position, new Vector3(0f, 1f, 0f));
         ship.GetComponent<Death>().Die();
     }
  }
