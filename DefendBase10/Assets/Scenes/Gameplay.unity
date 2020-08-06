@@ -708,7 +708,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &102504751
 RectTransform:
   m_ObjectHideFlags: 0
@@ -740,12 +740,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e20f633c6b6d6497b846cb405dc47646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textDisplay: {fileID: 0}
+  textDisplay: {fileID: 1723122487}
   sentences:
   - 'Private: Sir! Base 1010 is ATTACKING!'
   - 'General: Activate the QUANTUM CANNON!!'
   typingSpeed: 0.02
-  continueButton: {fileID: 0}
+  continueButton: {fileID: 1445950609}
 --- !u!1 &168950341
 GameObject:
   m_ObjectHideFlags: 0
@@ -5601,7 +5601,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1445950610
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5696,7 +5696,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: CONTINUE
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 0}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -6515,7 +6515,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1723122486
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6556,7 +6556,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 0}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
