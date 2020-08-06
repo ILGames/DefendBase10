@@ -28,6 +28,7 @@ public class WaveManager : MonoBehaviour
     public float waveCountdown;
     public float timeBetweenWaves = 4f;
     public float progress;
+    public WaveText waveText;
 
     void Start()
     {
@@ -38,6 +39,7 @@ public class WaveManager : MonoBehaviour
 
         waveCountdown -= Time.deltaTime;
         progress = waveCountdown;
+
         if(waveCountdown <= 0)
         {
             WaveCompleted();
@@ -73,6 +75,7 @@ public class WaveManager : MonoBehaviour
         //TODO: Tell Spawner how fast to spawn, etc.
         spawner.StartSpawning();
         waveBar.ResetBar(waveCountdown);
+        waveText.ResetText();
     }
 
     IEnumerator waitToBeginNextWave()
