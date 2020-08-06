@@ -28,6 +28,9 @@ public class WaveManager : MonoBehaviour
     private float progress;
     public WaveText waveText;
     public ButtonAppear buttonAppear;
+    public FirstAnimation firstAnimation;
+    public SecondTransition secondTransition;
+    public ThirdAnimation thirdAnimation;
 
     void Start()
     {
@@ -76,6 +79,9 @@ public class WaveManager : MonoBehaviour
         waveBar.ResetBar(waveCountdown);
         waveText.ResetText();
         buttonAppear.ResetDigits();
+        firstAnimation.ResetDigits();
+        secondTransition.ResetDigits();
+        thirdAnimation.ResetDigits();
     }
 
     IEnumerator waitToBeginNextWave()
