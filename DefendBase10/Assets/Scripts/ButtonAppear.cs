@@ -12,6 +12,9 @@ public class ButtonAppear : MonoBehaviour{
 	GameObject Button_4;
 	GameObject Button_5;
 	GameObject Button_6;
+	public string[] sentences;
+	private int index;
+	public WaveManager wavemanager;
 
 	void Start() 
 	{
@@ -25,5 +28,32 @@ public class ButtonAppear : MonoBehaviour{
 	toggle5.interactable = false;
         Button_6 = GameObject.Find("Button_6");
 	toggle6.interactable = false;
+	}
+    void Update()
+    {
+		if(sentences[index] == "Wave 1")
+        {
+			toggle2.interactable = true;
+        }
+		if (sentences[index] == "Wave 11")
+		{
+			toggle3.interactable = true;
+		}
+		if (sentences[index] == "Wave 110")
+		{
+			toggle4.interactable = true;
+		}
+		if (sentences[index] == "Wave 1010")
+		{
+			toggle5.interactable = true;
+		}
+		if (sentences[index] == "Wave 10000")
+		{
+			toggle6.interactable = true;
+		}
+	}
+	public void ResetDigits()
+	{
+		index++;
 	}
 }

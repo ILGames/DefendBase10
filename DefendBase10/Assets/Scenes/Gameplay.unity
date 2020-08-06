@@ -424,8 +424,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 790, y: -1135}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 250.25, y: -1075}
+  m_SizeDelta: {x: 5.785721, y: 12.857143}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &60320333
 MonoBehaviour:
@@ -1716,7 +1716,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -112.38727, y: 262}
+  m_AnchoredPosition: {x: -120, y: 259}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &243750153
@@ -2213,6 +2213,35 @@ MonoBehaviour:
   toggle4: {fileID: 1169877536}
   toggle5: {fileID: 1035951204}
   toggle6: {fileID: 336880162}
+  sentences:
+  - 
+  - Wave 0
+  - Wave 1
+  - Wave 10
+  - Wave 11
+  - Wave 100
+  - Wave 101
+  - Wave 110
+  - Wave 111
+  - Wave 1000
+  - Wave 1001
+  - Wave 1010
+  - Wave 1011
+  - Wave 1100
+  - Wave 1101
+  - Wave 1110
+  - Wave 1111
+  - Wave 10000
+  - Wave 10001
+  - Wave 10010
+  - Wave 10011
+  - Wave 10100
+  - Wave 10101
+  - Wave 10110
+  - Wave 10111
+  - Wave 11000
+  - Wave 11001
+  wavemanager: {fileID: 2120978632}
 --- !u!1 &413027043
 GameObject:
   m_ObjectHideFlags: 0
@@ -7786,183 +7815,157 @@ MonoBehaviour:
   waveBar: {fileID: 9856289}
   spawner: {fileID: 1478399938}
   waves:
-  - name: Wave 0
-    enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
     lengthOfTime: 15
     level: 1
     digits: 1
     maxspawn: 3
     minspawn: 2
-  - name: Wave 1
-    enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
     lengthOfTime: 20
     level: 2
     digits: 2
     maxspawn: 4
     minspawn: 2.4
-  - name: Wave 10
-    enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
     lengthOfTime: 10
     level: 3
     digits: 2
     maxspawn: 3
     minspawn: 2
-  - name: 
-    enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
     lengthOfTime: 20
     level: 4
     digits: 3
     maxspawn: 4
     minspawn: 2.4
-  - name: 
-    enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
     lengthOfTime: 30
     level: 5
     digits: 3
     maxspawn: 2.8
     minspawn: 1.8
-  - name: 
-    enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
     lengthOfTime: 10
     level: 6
     digits: 3
     maxspawn: 2
     minspawn: 1
-  - name: 
-    enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
     lengthOfTime: 25
     level: 7
     digits: 4
     maxspawn: 4
     minspawn: 2.4
-  - name: 
-    enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
     lengthOfTime: 20
     level: 8
     digits: 4
     maxspawn: 3.8
     minspawn: 2
-  - name: 
-    enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
     lengthOfTime: 17
     level: 9
     digits: 4
     maxspawn: 3.5
     minspawn: 1.5
-  - name: 
-    enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
     lengthOfTime: 15
     level: 10
     digits: 4
     maxspawn: 2
     minspawn: 1
-  - name: 
-    enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
     lengthOfTime: 30
     level: 11
     digits: 5
     maxspawn: 4
     minspawn: 3.5
-  - name: 
-    enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
     lengthOfTime: 25
     level: 12
     digits: 5
     maxspawn: 3.8
     minspawn: 3
-  - name: 
-    enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
     lengthOfTime: 20
     level: 13
     digits: 5
     maxspawn: 3.5
     minspawn: 3.2
-  - name: 
-    enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
     lengthOfTime: 17
     level: 14
     digits: 5
     maxspawn: 3.3
     minspawn: 3
-  - name: 
-    enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
     lengthOfTime: 15
     level: 15
     digits: 5
     maxspawn: 3
     minspawn: 2
-  - name: 
-    enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
     lengthOfTime: 10
     level: 16
     digits: 5
     maxspawn: 2.5
     minspawn: 2
-  - name: 
-    enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
     lengthOfTime: 30
     level: 17
     digits: 6
     maxspawn: 5
     minspawn: 4
-  - name: 
-    enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
     lengthOfTime: 25
     level: 18
     digits: 6
     maxspawn: 4.5
     minspawn: 3.5
-  - name: 
-    enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
     lengthOfTime: 20
     level: 19
     digits: 6
     maxspawn: 4.2
     minspawn: 3.2
-  - name: 
-    enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
     lengthOfTime: 20
     level: 20
     digits: 6
     maxspawn: 4
     minspawn: 3
-  - name: 
-    enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
     lengthOfTime: 17
     level: 21
     digits: 6
     maxspawn: 3.5
     minspawn: 3
-  - name: 
-    enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
     lengthOfTime: 15
     level: 22
     digits: 6
     maxspawn: 3.3
     minspawn: 2.8
-  - name: 
-    enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
     lengthOfTime: 15
     level: 23
     digits: 6
     maxspawn: 3
     minspawn: 2.5
-  - name: 
-    enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
     lengthOfTime: 13
     level: 24
     digits: 6
     maxspawn: 2.7
     minspawn: 2.3
-  - name: 
-    enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
     lengthOfTime: 13
     level: 25
     digits: 6
     maxspawn: 2.4
     minspawn: 1.7
-  - name: 
-    enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
     lengthOfTime: 10
     level: 26
     digits: 6
@@ -7970,8 +7973,8 @@ MonoBehaviour:
     minspawn: 1
   waveCountdown: 0
   timeBetweenWaves: 5
-  progress: 0
   waveText: {fileID: 909008862}
+  buttonAppear: {fileID: 375569949}
 --- !u!4 &2120978633
 Transform:
   m_ObjectHideFlags: 0

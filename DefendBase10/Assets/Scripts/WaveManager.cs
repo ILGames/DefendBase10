@@ -9,7 +9,6 @@ public class WaveManager : MonoBehaviour
     [System.Serializable]
     public class Wave
     {
-        public string name;
         //Reference to prefab we want to instantiate at our spawnpoints
         public Transform enemy;
         public float lengthOfTime;
@@ -24,11 +23,11 @@ public class WaveManager : MonoBehaviour
     //Store index of the wave we want to be creating next
     private int currentWave = 0;
 
-    //Stores wave countdown timer
     public float waveCountdown;
     public float timeBetweenWaves = 4f;
-    public float progress;
+    private float progress;
     public WaveText waveText;
+    public ButtonAppear buttonAppear;
 
     void Start()
     {
@@ -76,6 +75,7 @@ public class WaveManager : MonoBehaviour
         spawner.StartSpawning();
         waveBar.ResetBar(waveCountdown);
         waveText.ResetText();
+        buttonAppear.ResetDigits();
     }
 
     IEnumerator waitToBeginNextWave()
