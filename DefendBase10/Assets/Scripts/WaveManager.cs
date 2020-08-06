@@ -18,7 +18,7 @@ public class WaveManager : MonoBehaviour
         public float maxspawn;
         public float minspawn;
     }
-
+    public WaveBar waveBar;
     public Spawner spawner;
     public Wave[] waves;
     //Store index of the wave we want to be creating next
@@ -28,9 +28,6 @@ public class WaveManager : MonoBehaviour
     public float waveCountdown;
     public float timeBetweenWaves = 4f;
     public float progress;
-
-
-
 
     void Start()
     {
@@ -75,11 +72,17 @@ public class WaveManager : MonoBehaviour
         waveCountdown = waves[currentWave].lengthOfTime;
         //TODO: Tell Spawner how fast to spawn, etc.
         spawner.StartSpawning();
+        waveBar.ResetBar(waveCountdown);
     }
 
     IEnumerator waitToBeginNextWave()
     {
         yield return new WaitForSeconds(timeBetweenWaves);
         StartWave();
+    }
+
+    public Wave getCurrentWave()
+    {
+        return waves[currentWave];
     }
 }

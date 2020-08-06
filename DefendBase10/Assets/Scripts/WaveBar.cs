@@ -17,13 +17,19 @@ public class WaveBar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        slider.maxValue = Mathf.Abs(wavemanager.progress);
+        
     }
     void Update()
     {
-        newprogress = wavemanager.progress;
+        newprogress -= Time.deltaTime;
         //Debug.Log("This is " + newProgress);
-        if (slider.value < newprogress)
-            slider.value += Time.deltaTime;
+        slider.value = slider.maxValue - newprogress;
+    }
+
+    public void ResetBar(float newMax)
+    {
+        slider.value = 0;
+        slider.maxValue = newMax;
+        newprogress = newMax;
     }
 }
