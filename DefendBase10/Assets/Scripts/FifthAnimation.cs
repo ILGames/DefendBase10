@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FirstAnimation : MonoBehaviour
+public class FifthAnimation : MonoBehaviour
 {
     Animator animator;
     public string[] sentences;
@@ -15,25 +15,13 @@ public class FirstAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (sentences[index] == "Wave 1")
+        if (sentences[index] == "Wave 1010")
         {
             animator.SetTrigger("firstTransition");
         }
-        if (sentences[index] == "Wave 11")
-        {
-            animator.SetTrigger("secondTransition");
-        }
-        if (sentences[index] == "Wave 110")
-        {
-            animator.SetTrigger("thirdTransition");
-        }
-        if (sentences[index] == "Wave 1010")
-        {
-            animator.SetTrigger("fourthTransition");
-        }
         if (sentences[index] == "Wave 10000")
         {
-            animator.SetTrigger("fifthTransition");
+            animator.SetTrigger("secondTransition");
         }
     }
     public void ResetDigits()

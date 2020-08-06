@@ -1278,6 +1278,26 @@ MonoBehaviour:
   - Wave 11
   - Wave 100
   - Wave 101
+  - Wave 110
+  - Wave 111
+  - Wave 1000
+  - Wave 1001
+  - Wave 1010
+  - Wave 1011
+  - Wave 1100
+  - Wave 1101
+  - Wave 1110
+  - Wave 1111
+  - Wave 10000
+  - Wave 10001
+  - Wave 10010
+  - Wave 10011
+  - Wave 10100
+  - Wave 10101
+  - Wave 10110
+  - Wave 10111
+  - Wave 11000
+  - Wave 11001
 --- !u!1 &215052857
 GameObject:
   m_ObjectHideFlags: 0
@@ -1836,6 +1856,26 @@ MonoBehaviour:
   - Wave 11
   - Wave 100
   - Wave 101
+  - Wave 110
+  - Wave 111
+  - Wave 1000
+  - Wave 1001
+  - Wave 1010
+  - Wave 1011
+  - Wave 1100
+  - Wave 1101
+  - Wave 1110
+  - Wave 1111
+  - Wave 10000
+  - Wave 10001
+  - Wave 10010
+  - Wave 10011
+  - Wave 10100
+  - Wave 10101
+  - Wave 10110
+  - Wave 10111
+  - Wave 11000
+  - Wave 11001
 --- !u!95 &243750156
 Animator:
   serializedVersion: 3
@@ -2050,6 +2090,8 @@ GameObject:
   - component: {fileID: 336880160}
   - component: {fileID: 336880162}
   - component: {fileID: 336880161}
+  - component: {fileID: 336880163}
+  - component: {fileID: 336880164}
   m_Layer: 5
   m_Name: Button_6
   m_TagString: Untagged
@@ -2153,6 +2195,65 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 0
+--- !u!95 &336880163
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336880159}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c5a814aa361434d11a95fbcdb8ad8928, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &336880164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336880159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12298e2e9a91a4a7c856b094a44ae065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sentences:
+  - 
+  - Wave 0
+  - Wave 1
+  - Wave 10
+  - Wave 11
+  - Wave 100
+  - Wave 101
+  - Wave 110
+  - Wave 111
+  - Wave 1000
+  - Wave 1001
+  - Wave 1010
+  - Wave 1011
+  - Wave 1100
+  - Wave 1101
+  - Wave 1110
+  - Wave 1111
+  - Wave 10000
+  - Wave 10001
+  - Wave 10010
+  - Wave 10011
+  - Wave 10100
+  - Wave 10101
+  - Wave 10110
+  - Wave 10111
+  - Wave 11000
+  - Wace 11001
 --- !u!1 &375569944
 GameObject:
   m_ObjectHideFlags: 0
@@ -4394,6 +4495,26 @@ MonoBehaviour:
   - Wave 11
   - Wave 100
   - Wave 101
+  - Wave 110
+  - Wave 111
+  - Wave 1000
+  - Wave 1001
+  - Wave 1010
+  - Wave 1011
+  - Wave 1100
+  - Wave 1101
+  - Wave 1110
+  - Wave 1111
+  - Wave 10000
+  - Wave 10001
+  - Wave 10010
+  - Wave 10011
+  - Wave 10100
+  - Wave 10101
+  - Wave 10110
+  - Wave 10111
+  - Wave 11000
+  - Wave 11001
 --- !u!1 &993020972
 GameObject:
   m_ObjectHideFlags: 0
@@ -4515,6 +4636,8 @@ GameObject:
   - component: {fileID: 1035951202}
   - component: {fileID: 1035951204}
   - component: {fileID: 1035951203}
+  - component: {fileID: 1035951205}
+  - component: {fileID: 1035951206}
   m_Layer: 5
   m_Name: Button_5
   m_TagString: Untagged
@@ -4618,6 +4741,65 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 0
+--- !u!95 &1035951205
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035951201}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7607691141c8f4aa888d65d04fc9fe77, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1035951206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035951201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0817ac31daee243e18118709db1106b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sentences:
+  - 
+  - Wave 0
+  - Wave 1
+  - Wave 10
+  - Wave 11
+  - Wave 100
+  - Wave 101
+  - Wave 110
+  - Wave 111
+  - Wave 1000
+  - Wave 1001
+  - Wave 1010
+  - Wave 1011
+  - Wave 1100
+  - Wave 1101
+  - Wave 1110
+  - Wave 1111
+  - Wave 10000
+  - Wave 10001
+  - Wave 10010
+  - Wave 10011
+  - Wave 10100
+  - Wave 10101
+  - Wave 10110
+  - Wave 10111
+  - Wave 11000
+  - Wave 11001
 --- !u!1 &1056594516
 GameObject:
   m_ObjectHideFlags: 0
@@ -4934,6 +5116,8 @@ GameObject:
   - component: {fileID: 1169877534}
   - component: {fileID: 1169877536}
   - component: {fileID: 1169877535}
+  - component: {fileID: 1169877538}
+  - component: {fileID: 1169877537}
   m_Layer: 5
   m_Name: Button_4
   m_TagString: Untagged
@@ -5037,6 +5221,65 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 0
+--- !u!114 &1169877537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169877533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2990e79b3201642619e9dbc421fdfc89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sentences:
+  - 
+  - Wave 0
+  - Wave 1
+  - Wave 10
+  - Wave 11
+  - Wave 100
+  - Wave 101
+  - Wave 110
+  - Wave 111
+  - Wave 1000
+  - Wave 1001
+  - Wave 1010
+  - Wave 1011
+  - Wave 1100
+  - Wave 1101
+  - Wave 1110
+  - Wave 1111
+  - Wave 10000
+  - Wave 10001
+  - Wave 10010
+  - Wave 10011
+  - Wave 10100
+  - Wave 10101
+  - Wave 10110
+  - Wave 10111
+  - Wave 11000
+  - Wave 10001
+--- !u!95 &1169877538
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169877533}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 88ff3fa6f14e846e5b00357cfb5467f4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1188791303
 GameObject:
   m_ObjectHideFlags: 0
@@ -8081,6 +8324,9 @@ MonoBehaviour:
   firstAnimation: {fileID: 214441862}
   secondTransition: {fileID: 243750155}
   thirdAnimation: {fileID: 991275610}
+  fourthAnimation: {fileID: 1169877537}
+  fifthAnimation: {fileID: 1035951206}
+  sixthAnimation: {fileID: 336880164}
 --- !u!4 &2120978633
 Transform:
   m_ObjectHideFlags: 0

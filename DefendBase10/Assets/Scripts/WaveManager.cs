@@ -31,6 +31,9 @@ public class WaveManager : MonoBehaviour
     public FirstAnimation firstAnimation;
     public SecondTransition secondTransition;
     public ThirdAnimation thirdAnimation;
+    public FourthAnimation fourthAnimation;
+    public FifthAnimation fifthAnimation;
+    public SixthAnimation sixthAnimation;
 
     void Start()
     {
@@ -82,6 +85,9 @@ public class WaveManager : MonoBehaviour
         firstAnimation.ResetDigits();
         secondTransition.ResetDigits();
         thirdAnimation.ResetDigits();
+        fourthAnimation.ResetDigits();
+        fifthAnimation.ResetDigits();
+        sixthAnimation.ResetDigits();
     }
 
     IEnumerator waitToBeginNextWave()

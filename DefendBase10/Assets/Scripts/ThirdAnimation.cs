@@ -19,6 +19,18 @@ public class ThirdAnimation : MonoBehaviour
         {
             animator.SetTrigger("firstTransition");
         }
+        if (sentences[index] == "Wave 110")
+        {
+            animator.SetTrigger("secondTransition");
+        }
+        if (sentences[index] == "Wave 1010")
+        {
+            animator.SetTrigger("thirdTransition");
+        }
+        if (sentences[index] == "Wave 10000")
+        {
+            animator.SetTrigger("fourthTransition");
+        }
     }
     public void ResetDigits()
     {

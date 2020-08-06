@@ -23,6 +23,18 @@ public class SecondTransition : MonoBehaviour
         {
             animator.SetTrigger("secondTransition");
         }
+        if (sentences[index] == "Wave 110")
+        {
+            animator.SetTrigger("thirdTransition");
+        }
+        if (sentences[index] == "Wave 1010")
+        {
+            animator.SetTrigger("fourthTransition");
+        }
+        if (sentences[index] == "Wave 10000")
+        {
+            animator.SetTrigger("fifthTransition");
+        }
 
     }
     public void ResetDigits()
