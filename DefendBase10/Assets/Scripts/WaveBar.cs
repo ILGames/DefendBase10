@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class WaveBar : MonoBehaviour
 {
     private Slider slider;
-    private float waveProgress = 0;
     public WaveManager wavemanager;
     public float newprogress;
 
@@ -16,7 +15,6 @@ public class WaveBar : MonoBehaviour
         slider = gameObject.GetComponent<Slider>();
     }
     // Start is called before the first frame update
-
     void Start()
     {
         slider.maxValue = Mathf.Abs(wavemanager.progress);
@@ -24,9 +22,8 @@ public class WaveBar : MonoBehaviour
     void Update()
     {
         newprogress = wavemanager.progress;
-        waveProgress = newprogress;
-        //Debug.Log("This is " + waveProgress);
-        if (slider.value < waveProgress)
+        //Debug.Log("This is " + newProgress);
+        if (slider.value < newprogress)
             slider.value += Time.deltaTime;
     }
 }
