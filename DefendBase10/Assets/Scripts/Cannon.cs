@@ -36,7 +36,7 @@ public class Cannon : MonoBehaviour
         {
             if (child.gameObject.name == "" + buttonValue.buttonValue)
             {
-                if (child.gameObject.transform.position.y < lowY && child.gameObject.transform.position.y > transform.position.y)
+                if (child.position.y < lowY && child.position.y > transform.position.y)
                 {
                     lowest = child.gameObject;
                     lowY = child.gameObject.transform.position.y;
@@ -46,12 +46,6 @@ public class Cannon : MonoBehaviour
             if (lowest != null)
             {
                 KillShip(lowest);
-            }
-
-            if (child.gameObject.transform.y < gameObject.y) 
-            {
-                KillShip();
-                child.buildings.SetActive(false);
             }
         }
     }
