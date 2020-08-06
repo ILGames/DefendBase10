@@ -7,27 +7,26 @@ public class WaveBar : MonoBehaviour
 {
     private Slider slider;
     private float waveProgress = 0;
-    public float FillSpeed = 0.5f;
+    public WaveManager wavemanager;
+    public float newprogress;
+
 
     private void Awake()
     {
         slider = gameObject.GetComponent<Slider>();
     }
     // Start is called before the first frame update
+
     void Start()
     {
-        IncrementProgress(0.75f);
+        slider.maxValue = Mathf.Abs(wavemanager.progress);
     }
-
-    // Update is called once per frame
     void Update()
     {
+        newprogress = wavemanager.progress;
+        waveProgress = newprogress;
+        //Debug.Log("This is " + waveProgress);
         if (slider.value < waveProgress)
-            slider.value += FillSpeed * Time.deltaTime;
-    }
-    //Adds the progress to the bar
-    public void IncrementProgress(float newprogress)
-    {
-        waveProgress = slider.value + newprogress;
+            slider.value += Time.deltaTime;
     }
 }

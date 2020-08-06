@@ -27,6 +27,7 @@ public class WaveManager : MonoBehaviour
     //Stores wave countdown timer
     public float waveCountdown;
     public float timeBetweenWaves = 4f;
+    public float progress;
 
 
 
@@ -39,6 +40,7 @@ public class WaveManager : MonoBehaviour
     {
 
         waveCountdown -= Time.deltaTime;
+        progress = waveCountdown;
         if(waveCountdown <= 0)
         {
             WaveCompleted();
@@ -50,9 +52,9 @@ public class WaveManager : MonoBehaviour
 
         spawner.StopSpawning();
         waveCountdown = waves[currentWave].lengthOfTime;
+        progress = waves[currentWave].lengthOfTime;
 
-
-        if(currentWave + 1 > waves.Length -1)
+        if (currentWave + 1 > waves.Length -1)
         {
             currentWave = 0;
             Debug.Log("Completed all waves!");

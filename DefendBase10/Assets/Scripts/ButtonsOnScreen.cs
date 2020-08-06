@@ -14,7 +14,7 @@ public class ButtonsOnScreen : MonoBehaviour
     void Update()
     {
 	Toggley toggley;
-        buttonsAnimated = 0;
+    buttonsAnimated = 0;
 	for(int index = 0; index <buttons.Length; index++)
 	{
 		toggley = buttons[index];
