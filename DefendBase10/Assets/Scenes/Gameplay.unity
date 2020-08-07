@@ -4262,6 +4262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 952896467}
   - component: {fileID: 952896468}
+  - component: {fileID: 952896469}
   m_Layer: 5
   m_Name: CannonBar
   m_TagString: Untagged
@@ -4334,12 +4335,25 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 5
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &952896469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952896466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a8998742c62fd7449f51b853555252e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newprogress: 0
 --- !u!1 &991275605
 GameObject:
   m_ObjectHideFlags: 0
@@ -7725,7 +7739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawner: {fileID: 1478399939}
   pivot: {fileID: 2134619372}
-  startWait: 4
+  startWait: 0
   fireWait: 5
 --- !u!1 &1903119497
 GameObject:

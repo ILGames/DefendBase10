@@ -64,7 +64,6 @@ public class Cannon : MonoBehaviour
 
     void KillShip(GameObject ship)
     {
-        pivot.LookAt(ship.transform.position);
         ship.GetComponent<Death>().Die();
     }
  }
