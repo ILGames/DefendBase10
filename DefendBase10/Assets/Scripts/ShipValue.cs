@@ -5,9 +5,23 @@ using UnityEngine;
 public class ShipValue : MonoBehaviour
 {
     public int value = 0;
+    ButtonsOnScreen buttonsShowing;
 
-    public void RandomizeValue(int max)
+    void Awake()
     {
+        
+    }
+
+    public void RandomizeValue(int max = -1)
+    {
+        buttonsShowing = GameObject.Find("ControlPanel").GetComponent<ButtonsOnScreen>();
+        Debug.Log("Buttons = "+ buttonsShowing.buttonsAnimated);
+
+        if (max < 0)
+        {
+            max = (int)Mathf.Pow(2,buttonsShowing.buttonsAnimated) - 1;
+            Debug.Log("Max = " + max);
+        }
         SetValue(Random.Range(0, max));
     }
 
@@ -18,15 +32,5 @@ public class ShipValue : MonoBehaviour
         TextMesh meshComponent = shipText.gameObject.GetComponent<TextMesh>();
         meshComponent.text = "" + value;
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

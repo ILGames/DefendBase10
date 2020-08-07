@@ -13,8 +13,7 @@ public class Spawner : MonoBehaviour
     public int startWait;
 
     bool on = false;
-
-    int maxNum = 2;
+    
     IEnumerator coroutine;
 
     ButtonsOnScreen buttonsShowing;
@@ -44,23 +43,26 @@ public class Spawner : MonoBehaviour
         StartCoroutine(coroutine);
     }
 
+    void SpawnShip()
+    {
+        Vector3 spawnPosition = new Vector3(Random.Range(2456, spawnValues.x), 2650, 17853);
+
+        GameObject newShip = Instantiate(enemy, spawnPosition, transform.rotation);
+        newShip.transform.SetParent(transform);
+        ShipValue valueScript = newShip.GetComponent<ShipValue>();
+        valueScript.RandomizeValue();
+
+        newShip.name = "" + valueScript.value;
+    }
+
     IEnumerator waitSpawner()
     {
         yield return new WaitForSeconds(startWait);
 
         while (on)
         {
-            maxNum = 2^(buttonsShowing.buttonsAnimated-1);
 
-            Vector3 spawnPosition = new Vector3(Random.Range(2456, spawnValues.x), 2650, 17853);
-
-            GameObject newShip = Instantiate(enemy, spawnPosition, transform.rotation);
-            newShip.transform.SetParent(transform);
-            ShipValue valueScript = newShip.GetComponent<ShipValue>();
-            valueScript.RandomizeValue(maxNum);
-            
-            newShip.name = "" + valueScript.value;
-            //Debug.Log("new ship # = "+ valueScript.value);
+            SpawnShip();
 
             spawnWait = Random.Range(spawnLeastWait, spawnMostWait);
 
