@@ -7741,6 +7741,7 @@ MonoBehaviour:
   pivot: {fileID: 2134619372}
   startWait: 0
   fireWait: 5
+  bar: {fileID: 952896469}
 --- !u!1 &1903119497
 GameObject:
   m_ObjectHideFlags: 0

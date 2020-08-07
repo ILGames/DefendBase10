@@ -10,25 +10,19 @@ public class CannonBar : MonoBehaviour
     private Slider slider;
     public float newprogress;
     
-
     private void Awake()
-  {
-    slider = gameObject.GetComponent<Slider>();
-  }
-
-  void Update()
-  {
-    newprogress += Time.deltaTime;
-    slider.value = slider.minValue + newprogress;
-  }
-
-  public void ResetBar()
-  {
-    GameObject cannon = GameObject.Find("cannon");
-
-    if (cannon.GetComponent<Cannon>().Fire().IsCalled()) 
     {
-      newprogress = 0;   
+        slider = gameObject.GetComponent<Slider>();
     }
-  }
+
+    void Update()
+    {
+        newprogress += Time.deltaTime;
+        slider.value = slider.minValue + newprogress;
+    }
+
+    public void ResetBar()
+    {
+        newprogress = 0;
+    }
 }

@@ -11,6 +11,7 @@ public class Cannon : MonoBehaviour
     public Transform pivot;
     public float startWait = 2f;
     public float fireWait = 5f;
+    public CannonBar bar;
 
 
     void Start()
@@ -28,6 +29,8 @@ public class Cannon : MonoBehaviour
         ToggleButtonManager buttonValue = ctrlPanel.GetComponent<ToggleButtonManager>();
         GameObject buildings = GameObject.Find("Buildings");
         //Debug.Log("Button ="+buttonValue.buttonValue);
+
+        bar.ResetBar();
 
         float lowY = 999999999;
         GameObject lowest = null;
