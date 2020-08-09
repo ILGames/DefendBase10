@@ -10,13 +10,12 @@ public class Toggley : MonoBehaviour
 	public GameObject switchOn, switchOff;
 	public int value = 0;
 
-	void Start(){
+	void Start()
+	{
 		OnChangeValue();
 	}
-	void Update(){
-		//Debug.Log(firstNumber);
-	}
-	public void OnChangeValue() {
+	public void OnChangeValue()
+	{
 		bool onoffSwitch = gameObject.GetComponent<Toggle>().isOn;
 		if (onoffSwitch)
 		{

@@ -1,13 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
+    public GameObject MainMenuUI;
+    public GameObject PauseMenuUI;
+    public Toggle pause;
+
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Time.timeScale = 1f;
+        MainMenuUI.SetActive(false);
+        PauseMenuUI.SetActive(false);
+        pause.interactable = true;
     }
     public void QuitGame()
     {

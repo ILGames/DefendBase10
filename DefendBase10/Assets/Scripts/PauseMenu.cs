@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject PauseMenuUI;
+    public Toggle pause;
+    public GameObject Canvas;
      
     
     void Update()
@@ -27,20 +30,27 @@ public class PauseMenu : MonoBehaviour
         PauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+        pause.interactable = true;
     }
-    void Pause()
+    public void Pause()
     {
         PauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
+        pause.interactable = false;
+        
     }
     public void LoadMenu()
     {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("Menu");
+        Time.timeScale = 0f;
+        EnableCanvas();
     }
     public void QuitGame()
     {
         Application.Quit();
+    }
+    void EnableCanvas()
+    {
+        Canvas.SetActive(true);
     }
 }
