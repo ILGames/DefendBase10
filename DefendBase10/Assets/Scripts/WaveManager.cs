@@ -16,7 +16,10 @@ public class WaveManager : MonoBehaviour
         public int digits;
         public float maxspawn;
         public float minspawn;
+        public bool IsDialogue;
+        public GameObject dialogueObject;
     }
+
     public WaveBar waveBar;
     public Spawner spawner;
     public Wave[] waves;
