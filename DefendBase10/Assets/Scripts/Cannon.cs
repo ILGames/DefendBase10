@@ -27,7 +27,6 @@ public class Cannon : MonoBehaviour
     {
         GameObject ctrlPanel = GameObject.Find("ControlPanel");
         ToggleButtonManager buttonValue = ctrlPanel.GetComponent<ToggleButtonManager>();
-        GameObject buildings = GameObject.Find("Buildings");
         //Debug.Log("Button ="+buttonValue.buttonValue);
 
         bar.ResetBar();
@@ -67,6 +66,6 @@ public class Cannon : MonoBehaviour
 
     void KillShip(GameObject ship)
     {
-        ship.GetComponent<Death>().Die();
+        ship.GetComponent<ShipDeath>().Die();
     }
  }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class Death : MonoBehaviour
+public class CannonDeath : MonoBehaviour
 {
 
     public void Die()
