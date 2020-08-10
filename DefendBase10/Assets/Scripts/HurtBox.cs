@@ -1,24 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class HurtBox : MonoBehaviour
 {
+    public Spawner spawner;
+    
+
     public void OnTriggerEnter(Collider other)
     {
-        List children = new List(GameObject);
-        Transform[] building = gameObject.GetComponentsInChildren<Transform>();
-        if (building == null)
-            return children;
-        foreach (Transform t in building)
+        UnityEngine.Debug.Log("Hurtbox triggred" + other);
+
+        if (other.transform.parent != spawner) 
         {
-            if (t != null && t.gameobject != null)
-                children.Add(t.gameobject);
+            return;        
         }
 
-        return children;
+        List<GameObject> children = new List<GameObject>();
+        Transform[] building = gameObject.GetComponentsInChildren<Transform>();
+        
+        foreach (Transform t in building)
+        {
+            if (t != null && t.gameObject != null)
+                children.Add(t.gameObject);
+        }
 
-        GameObject buildings = children[Random.Range(0, children)];
-        buildings.Destroy();
+        GameObject buildings = children[Random.Range(0, children.Count)];
+        Destroy(buildings);
     }
 }
