@@ -72,7 +72,6 @@ public class WaveManager : MonoBehaviour
 
         if (currentWave + 1 > waves.Length - 1)
         {
-            currentWave = 0;
             Debug.Log("Completed all waves!");
             waveCountdown = float.PositiveInfinity;
             spawner.StopSpawning();
