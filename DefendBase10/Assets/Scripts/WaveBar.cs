@@ -17,13 +17,11 @@ public class WaveBar : MonoBehaviour
 
     public void Update()
     {
-        while(waveManager.switchy == false)
-        {
-            Stop();
-        }
+
         newprogress -= Time.deltaTime;
         //Debug.Log("This is " + newProgress);
         slider.value = slider.maxValue - newprogress;
+
     }
 
     public void ResetBar(float newMax)

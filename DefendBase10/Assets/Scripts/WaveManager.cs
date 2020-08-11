@@ -44,7 +44,6 @@ public class WaveManager : MonoBehaviour
     public Dialogue3 dialogue3;
     public Dialogue4 dialogue4;
     public Dialogue5 dialogue5;
-    public bool switchy;
 
 
     void Start()
@@ -54,6 +53,7 @@ public class WaveManager : MonoBehaviour
     }
     void Update()
     {
+        waveCountdown -= Time.deltaTime;
         progress = waveCountdown;
         level_text = wave.level;
 
@@ -63,17 +63,15 @@ public class WaveManager : MonoBehaviour
         }
         if (level_text == 0)
         {
-            spawner.StopSpawning();
-            waveBar.Stop();
-            switchy = false;
+            //spawner.StopSpawning();
+            //waveBar.Stop();
             firstText.SetActive(true);
         }
         if(dialogue.text == false)
         {
             firstSetActive();
-            switchy = true;
-            spawner.StartSpawning();
-            waveBar.Update();
+            //spawner.StartSpawning();
+            //waveBar.Update();
         }
         if (level_text == 1)
         {

@@ -173,6 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newprogress: 0
+  waveManager: {fileID: 2120978632}
 --- !u!114 &9856290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10536,6 +10537,7 @@ MonoBehaviour:
   dialogue3: {fileID: 275396801}
   dialogue4: {fileID: 2123686504}
   dialogue5: {fileID: 1442536426}
+  switchy: 0
 --- !u!4 &2120978633
 Transform:
   m_ObjectHideFlags: 0
