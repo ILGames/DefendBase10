@@ -8,7 +8,7 @@ public class WaveBar : MonoBehaviour
     private Slider slider;
     public float newprogress;
     public WaveManager waveManager;
-
+    public bool stopped = true;
 
     private void Awake()
     {
@@ -17,11 +17,12 @@ public class WaveBar : MonoBehaviour
 
     public void Update()
     {
-
-        newprogress -= Time.deltaTime;
-        //Debug.Log("This is " + newProgress);
-        slider.value = slider.maxValue - newprogress;
-
+        if (!stopped)
+        {
+            newprogress -= Time.deltaTime;
+            //Debug.Log("This is " + newProgress);
+            slider.value = slider.maxValue - newprogress;
+        }
     }
 
     public void ResetBar(float newMax)
@@ -33,7 +34,13 @@ public class WaveBar : MonoBehaviour
 
     public void Stop()
     {
+        stopped = true;
         slider.value = 0;
         newprogress = 0;
+    }
+
+    public void Start()
+    {
+        stopped = false;
     }
 }

@@ -17,8 +17,9 @@ public class WaveManager : MonoBehaviour
         public int digits;
         public float maxspawn;
         public float minspawn;
+        public bool isDialogue;
+        public Dialogue dialogue;
     }
-    public Wave wave;
 
     public WaveBar waveBar;
     public Spawner spawner;
@@ -37,77 +38,32 @@ public class WaveManager : MonoBehaviour
     public FourthAnimation fourthAnimation;
     public FifthAnimation fifthAnimation;
     public SixthAnimation sixthAnimation;
-    public float level_text;
     public GameObject firstText, secondText, thirdText, fourthText, fifthText;
     public Dialogue dialogue;
-    public Dialogue2 dialogue2;
-    public Dialogue3 dialogue3;
-    public Dialogue4 dialogue4;
-    public Dialogue5 dialogue5;
+    public Dialogue dialogue2;
+    public Dialogue dialogue3;
+    public Dialogue dialogue4;
+    public Dialogue dialogue5;
+
+    public 
 
 
     void Start()
     {
         StartWave();
-        wave.level = 0;
     }
     void Update()
     {
         waveCountdown -= Time.deltaTime;
         progress = waveCountdown;
-        level_text = wave.level;
 
-        if (waveCountdown <= 0)
+        if (waveCountdown <= 0 && !waves[currentWave].isDialogue)
         {
             WaveCompleted();
         }
-        if (level_text == 0)
+        else if (waves[currentWave].isDialogue && !waves[currentWave].dialogue.text)
         {
-            //spawner.StopSpawning();
-            //waveBar.Stop();
-            firstText.SetActive(true);
-        }
-        if(dialogue.text == false)
-        {
-            firstSetActive();
-            //spawner.StartSpawning();
-            //waveBar.Update();
-        }
-        if (level_text == 1)
-        {
-            spawner.StopSpawning();
-            secondText.SetActive(true);
-        }
-        if (dialogue2.text == false)
-        {
-            secondSetActive();
-        }
-        if (level_text == 3)
-        {
-            spawner.StopSpawning();
-            thirdText.SetActive(true);
-        }
-        if (dialogue3.text == false)
-        {
-            thirdSetActive();
-        }
-        if (level_text == 10)
-        {
-            spawner.StopSpawning();
-            fourthText.SetActive(true);
-        }
-        if (dialogue4.text == false)
-        {
-            fourthSetActive();
-        }
-        if (level_text == 26)
-        {
-            spawner.StopSpawning();
-            fifthText.SetActive(true);
-        }
-        if (dialogue5.text == false)
-        {
-            fifthSetActive();
+            WaveCompleted();
         }
     }
     void WaveCompleted()
@@ -117,7 +73,6 @@ public class WaveManager : MonoBehaviour
         spawner.StopSpawning();
         waveCountdown = waves[currentWave].lengthOfTime;
         progress = waves[currentWave].lengthOfTime;
-        wave.level += 1;
 
         if (currentWave + 1 > waves.Length - 1)
         {
@@ -138,23 +93,32 @@ public class WaveManager : MonoBehaviour
     {
         waveCountdown = waves[currentWave].lengthOfTime;
         //TODO: Tell Spawner how fast to spawn, etc.
-        spawner.StartSpawning();
-        waveBar.ResetBar(waveCountdown);
-        waveText.ResetText();
-        buttonAppear.ResetDigits();
-        firstAnimation.ResetDigits();
-        secondTransition.ResetDigits();
-        thirdAnimation.ResetDigits();
-        fourthAnimation.ResetDigits();
-        fifthAnimation.ResetDigits();
-        sixthAnimation.ResetDigits();
+        if (!waves[currentWave].isDialogue)
+        {
+            Debug.Log("Starting Ship Wave");
+            spawner.StartSpawning();
+            waveBar.ResetBar(waveCountdown);
+            waveText.ResetText();
+            buttonAppear.ResetDigits();
+            firstAnimation.ResetDigits();
+            secondTransition.ResetDigits();
+            thirdAnimation.ResetDigits();
+            fourthAnimation.ResetDigits();
+            fifthAnimation.ResetDigits();
+            sixthAnimation.ResetDigits();
+        }
+        else
+        {
+            Debug.Log("Starting Dialogue "+ waves[currentWave].dialogue.gameObject.transform.parent.gameObject.name);
+            waves[currentWave].dialogue.gameObject.transform.parent.gameObject.SetActive(true);
+        }
     }
 
     IEnumerator waitToBeginNextWave()
     {
         yield return new WaitForSeconds(timeBetweenWaves);
         StartWave();
-        waveBar.Update();
+        //waveBar.Update();
     }
 
     public Wave getCurrentWave()
