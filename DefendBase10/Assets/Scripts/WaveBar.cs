@@ -7,7 +7,6 @@ public class WaveBar : MonoBehaviour
 {
     private Slider slider;
     public float newprogress;
-    public WaveManager waveManager;
     public bool stopped = true;
 
     private void Awake()

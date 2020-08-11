@@ -29,7 +29,6 @@ public class WaveManager : MonoBehaviour
 
     public float waveCountdown;
     public float timeBetweenWaves = 4f;
-    private float progress;
     public WaveText waveText;
     public ButtonAppear buttonAppear;
     public FirstAnimation firstAnimation;
@@ -38,7 +37,6 @@ public class WaveManager : MonoBehaviour
     public FourthAnimation fourthAnimation;
     public FifthAnimation fifthAnimation;
     public SixthAnimation sixthAnimation;
-    public GameObject firstText, secondText, thirdText, fourthText, fifthText;
     public Dialogue dialogue;
     public Dialogue dialogue2;
     public Dialogue dialogue3;
@@ -55,7 +53,6 @@ public class WaveManager : MonoBehaviour
     void Update()
     {
         waveCountdown -= Time.deltaTime;
-        progress = waveCountdown;
 
         if (waveCountdown <= 0 && !waves[currentWave].isDialogue)
         {
@@ -63,6 +60,7 @@ public class WaveManager : MonoBehaviour
         }
         else if (waves[currentWave].isDialogue && !waves[currentWave].dialogue.text)
         {
+
             WaveCompleted();
         }
     }
@@ -71,8 +69,6 @@ public class WaveManager : MonoBehaviour
         Debug.Log("wave Completed! " + currentWave);
 
         spawner.StopSpawning();
-        waveCountdown = waves[currentWave].lengthOfTime;
-        progress = waves[currentWave].lengthOfTime;
 
         if (currentWave + 1 > waves.Length - 1)
         {
@@ -124,25 +120,5 @@ public class WaveManager : MonoBehaviour
     public Wave getCurrentWave()
     {
         return waves[currentWave];
-    }
-    public void firstSetActive()
-    {
-        firstText.SetActive(false);
-    }
-    public void secondSetActive()
-    {
-        secondText.SetActive(false);
-    }
-    public void thirdSetActive()
-    {
-        thirdText.SetActive(false);
-    }
-    public void fourthSetActive()
-    {
-        fourthText.SetActive(false);
-    }
-    public void fifthSetActive()
-    {
-        fifthText.SetActive(false);
     }
 }

@@ -173,7 +173,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newprogress: 0
-  waveManager: {fileID: 2120978632}
   stopped: 1
 --- !u!114 &9856290
 MonoBehaviour:
@@ -2171,7 +2170,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 275396800}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9efe07ff2a1364ef39a821e771349137, type: 3}
+  m_Script: {fileID: 11500000, guid: e20f633c6b6d6497b846cb405dc47646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 883463683}
@@ -2180,19 +2179,19 @@ MonoBehaviour:
   - 'General: We''ll need another digit.'
   - 'Private: Twice as many ships, but only one extra digit?'
   - 'General: I''ll explain, but we haven''t much time.'
-  - 'General: In a number, each digit can be from 0 to base-1, right?'
-  - 'Private: Right. We''re base 10 (or "2") so we have 0-1.'
+  - 'General: In a number , wach digit can be from 0 to base-1, right?'
+  - 'Private: Right. We''re base 10(or"2") so we have 0-1.'
   - 'Private: Over at base 1010, (or what they call "10") they have 0-9.'
   - 'Private: Ugh.'
   - 'General: And each digit as you move left is worth more, right?'
   - 'Private: Right.'
   - 'General: How much more?'
-  - 'Private: ...uh... twice as much?'
-  - 'General: For us Binaries?   Yes.   Exactly.'
-  - 'General: That''s why we only need one more digit...'
-  - 'General: ... for Two Times the enemies!'
+  - 'Private: ..Uh.. Twice as much?'
+  - 'General: For us Binaries? ... Yes...Exacly.'
+  - 'General: That''s why we only need one more digit..'
+  - 'General: .. For two times the enemies!'
   - 'Private: But they only need one digit for Ten Times the enemies.'
-  - 'General: Oh, no! You''re right!'
+  - "General: Oh, no!  You\u2019re right!"
   typingSpeed: 0.02
   continueButton: {fileID: 718705446}
   text: 0
@@ -2731,7 +2730,6 @@ GameObject:
   m_Component:
   - component: {fileID: 375569945}
   - component: {fileID: 375569946}
-  - component: {fileID: 375569948}
   - component: {fileID: 375569947}
   - component: {fileID: 375569949}
   m_Layer: 0
@@ -2806,25 +2804,6 @@ MonoBehaviour:
   - {fileID: 1035951203}
   - {fileID: 336880161}
   buttonsAnimated: 0
---- !u!95 &375569948
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 375569944}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 805454a85449140dcb5fdd461c12258e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &375569949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3988,7 +3967,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 275396801}
+      - m_Target: {fileID: 2123686504}
         m_MethodName: NextSentence
         m_Mode: 1
         m_Arguments:
@@ -6835,9 +6814,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 1217082739}
   sentences:
-  - 
-  - 
-  - 
+  - 'Private: There are more of them! They just keep coming!!'
+  - 'General: Pull yourself together.'
+  - 'General: We''ll need to use another digit. Stand clear.'
+  - 'Private: A new digit? How does it work?'
+  - 'General: These Decimals have different numerals.'
+  - 'General: What we call "10" they call "2".'
+  - 'General: What we call "11" they call "3".'
+  - 'Private: My God! They must be STOPPED!!'
   typingSpeed: 0.02
   continueButton: {fileID: 1439251204}
   text: 0
@@ -7491,7 +7475,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1342469381}
         m_MethodName: NextSentence
         m_Mode: 1
         m_Arguments:
@@ -7647,17 +7631,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1442536425}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58511dd765615417fa7a561b132caa44, type: 3}
+  m_Script: {fileID: 11500000, guid: e20f633c6b6d6497b846cb405dc47646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 2047325408}
   sentences:
-  - 'Private: The Decimals are reatreating!'
+  - 'Private: The Decimals are retreating.'
   - 'Private: We did it, Sir!'
-  - 'General: Peace has come to Binary one again!'
-  - 'Private: Wait... Something''s coming...'
+  - 'General: Peace has come to Binary once again.'
+  - "Private: Wait...Something's coming\u2026"
   - 'General: What is it?'
-  - 'Private: They''re saying... "D1E"!'
+  - "Private: They\u2019re saying\u2026\u201DD1E\u201D!"
   typingSpeed: 0.02
   continueButton: {fileID: 1056594516}
   text: 0
@@ -10569,16 +10553,11 @@ MonoBehaviour:
   fourthAnimation: {fileID: 1169877537}
   fifthAnimation: {fileID: 1035951206}
   sixthAnimation: {fileID: 336880164}
-  firstText: {fileID: 1713973301}
-  secondText: {fileID: 1387452786}
-  thirdText: {fileID: 772002519}
-  fourthText: {fileID: 434151932}
-  fifthText: {fileID: 1631954022}
   dialogue: {fileID: 102504752}
-  dialogue2: {fileID: 0}
-  dialogue3: {fileID: 0}
-  dialogue4: {fileID: 0}
-  dialogue5: {fileID: 0}
+  dialogue2: {fileID: 1342469381}
+  dialogue3: {fileID: 275396801}
+  dialogue4: {fileID: 2123686504}
+  dialogue5: {fileID: 1442536426}
 --- !u!4 &2120978633
 Transform:
   m_ObjectHideFlags: 0
@@ -10619,23 +10598,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 2123686503}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e99571151149148bbb074b2bc1333e13, type: 3}
+  m_Script: {fileID: 11500000, guid: e20f633c6b6d6497b846cb405dc47646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 210033121}
   sentences:
-  - 'Private: General! I''ve worked out the formula for getting the value of a number.'
-  - 'General: Don''t be silly. The numbers tell you the value.'
-  - 'Private: Yes, but it could be useful for decoding between bases.'
-  - 'General: OK, let''s hear it.'
-  - 'Private: Digit value = digit*(base^place)'
-  - 'Private: And total value = the sum of all Digit Values!'
+  - "Private: General!  I\u2019ve worked out a formula for getting the value of a
+    number."
+  - "General: Don\u2019t be silly.  The number tells you the value."
+  - 'Private:  Yes, but it could be useful for decoding between bases.'
+  - "General: OK, let\u2019s hear it."
+  - 'Private: Digit value  = digit*(base^place)'
+  - 'Private: And Total value = the sum of all Digit values!'
   - 'General: An example?'
-  - 'Private: Take the number "23".'
+  - 'Private: Take the Decimal number 23.'
   - 'General: <Shudders>'
-  - 'Private: "23" is 2*(10^1) + 3(10^0)'
+  - 'Private: 23 is 2*(10^1) + 3*(10^0)'
   - 'General: Why not just say 10111?'
-  - 'Private: We''ve got to think like the enemy, sir!'
+  - "Private: We\u2019ve got to think like the enemy, sir!"
   typingSpeed: 0.02
   continueButton: {fileID: 949742014}
   text: 0
