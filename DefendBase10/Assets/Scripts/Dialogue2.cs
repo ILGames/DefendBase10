@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class Dialogue : MonoBehaviour
+public class Dialogue2 : MonoBehaviour
 {
     public TextMeshProUGUI textDisplay;
     public string[] sentences;
@@ -19,7 +19,7 @@ public class Dialogue : MonoBehaviour
     }
     void Update()
     {
-        if(textDisplay.text == sentences[index])
+        if (textDisplay.text == sentences[index])
         {
             continueButton.SetActive(true);
         }
@@ -35,7 +35,7 @@ public class Dialogue : MonoBehaviour
     public void NextSentence()
     {
         continueButton.SetActive(false);
-        if(index < sentences.Length - 1)
+        if (index < sentences.Length - 1)
         {
             index++;
             textDisplay.text = "";

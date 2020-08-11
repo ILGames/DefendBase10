@@ -15,12 +15,12 @@ public class ShipValue : MonoBehaviour
     public void RandomizeValue(int max = -1)
     {
         buttonsShowing = GameObject.Find("ControlPanel").GetComponent<ButtonsOnScreen>();
-        Debug.Log("Buttons = "+ buttonsShowing.buttonsAnimated);
+        //Debug.Log("Buttons = "+ buttonsShowing.buttonsAnimated);
 
         if (max < 0)
         {
             max = (int)Mathf.Pow(2,buttonsShowing.buttonsAnimated) - 1;
-            Debug.Log("Max = " + max);
+           // Debug.Log("Max = " + max);
         }
         SetValue(Random.Range(0, max));
     }

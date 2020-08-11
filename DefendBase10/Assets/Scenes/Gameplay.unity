@@ -764,6 +764,7 @@ MonoBehaviour:
   - 'General: Activate the QUANTUM CANNON!!'
   typingSpeed: 0.02
   continueButton: {fileID: 1445950609}
+  text: 0
 --- !u!1 &122780046
 GameObject:
   m_ObjectHideFlags: 0
@@ -1205,6 +1206,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ship 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8743387523668677879, guid: a8cbfb1e6dcd03b41a6edcca07e761d3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
 --- !u!1 &210033120
@@ -1538,6 +1544,7 @@ MonoBehaviour:
   - Wave 10111
   - Wave 11000
   - Wave 11001
+  - 
 --- !u!1 &215052857
 GameObject:
   m_ObjectHideFlags: 0
@@ -2116,6 +2123,7 @@ MonoBehaviour:
   - Wave 10111
   - Wave 11000
   - Wave 11001
+  - 
 --- !u!95 &243750156
 Animator:
   serializedVersion: 3
@@ -2161,7 +2169,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 275396800}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e20f633c6b6d6497b846cb405dc47646, type: 3}
+  m_Script: {fileID: 11500000, guid: 9efe07ff2a1364ef39a821e771349137, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 883463683}
@@ -2185,6 +2193,7 @@ MonoBehaviour:
   - 'General: Oh, no! You''re right!'
   typingSpeed: 0.02
   continueButton: {fileID: 718705446}
+  text: 0
 --- !u!224 &275396802
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2631,6 +2640,7 @@ MonoBehaviour:
   - Wave 10111
   - Wave 11000
   - Wace 11001
+  - 
 --- !u!1 &338630931
 GameObject:
   m_ObjectHideFlags: 0
@@ -5082,6 +5092,7 @@ MonoBehaviour:
   - Wave 10111
   - Wave 11000
   - Wave 11001
+  - The End
 --- !u!1 &949742014
 GameObject:
   m_ObjectHideFlags: 0
@@ -5570,6 +5581,7 @@ MonoBehaviour:
   - Wave 10111
   - Wave 11000
   - Wave 11001
+  - 
 --- !u!1 &993020972
 GameObject:
   m_ObjectHideFlags: 0
@@ -5855,6 +5867,7 @@ MonoBehaviour:
   - Wave 10111
   - Wave 11000
   - Wave 11001
+  - 
 --- !u!1 &1051614464
 GameObject:
   m_ObjectHideFlags: 0
@@ -6370,6 +6383,7 @@ MonoBehaviour:
   - Wave 10111
   - Wave 11000
   - Wave 10001
+  - 
 --- !u!95 &1169877538
 Animator:
   serializedVersion: 3
@@ -6814,22 +6828,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1342469379}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e20f633c6b6d6497b846cb405dc47646, type: 3}
+  m_Script: {fileID: 11500000, guid: 19908545ec9fa456897cb49607d306d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 1217082739}
   sentences:
-  - 'Private: There are more of them! They just keep coming!'
+  - 'Private: There are more of them, they just keep coming!'
   - 'General: Pull yourself together!'
-  - 'General: We''ll need to use another digit, STAND CLEAR!'
-  - 
+  - 'General: We will need another digit, stand clear!'
   - 'Private: A new digit? How does it work?'
-  - 'General: These Decimals have different numbers.'
-  - 'General: What we call "10" they call "2"'
+  - 'General: These Decimals have different numerals.'
+  - 'General: What we call "10" they call "2".'
   - 'General: What we call "11" they call "3"'
   - 'Private: My God! They must be STOPPED!!'
   typingSpeed: 0.02
   continueButton: {fileID: 1439251204}
+  text: 0
 --- !u!1 &1357632990
 GameObject:
   m_ObjectHideFlags: 0
@@ -7417,7 +7431,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1439251205
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7636,7 +7650,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1442536425}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e20f633c6b6d6497b846cb405dc47646, type: 3}
+  m_Script: {fileID: 11500000, guid: 58511dd765615417fa7a561b132caa44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 2047325408}
@@ -7649,6 +7663,7 @@ MonoBehaviour:
   - 'Private: They''re saying... "D1E"!'
   typingSpeed: 0.02
   continueButton: {fileID: 1056594516}
+  text: 0
 --- !u!224 &1442536427
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7686,7 +7701,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1445950610
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7914,6 +7929,7 @@ MonoBehaviour:
   spawnMostWait: 10
   spawnLeastWait: 5
   startWait: 5
+  waveManager: {fileID: 2120978632}
 --- !u!4 &1478399939
 Transform:
   m_ObjectHideFlags: 0
@@ -10327,6 +10343,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b9a2a4f29e0481f906c6ed0541c837, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wave:
+    enemy: {fileID: 0}
+    lengthOfTime: 0
+    level: 0
+    digits: 0
+    maxspawn: 0
+    minspawn: 0
   waveBar: {fileID: 9856289}
   spawner: {fileID: 1478399938}
   waves:
@@ -10486,6 +10509,12 @@ MonoBehaviour:
     digits: 6
     maxspawn: 2
     minspawn: 1
+  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+    lengthOfTime: 10
+    level: 26
+    digits: 6
+    maxspawn: 2
+    minspawn: 1
   waveCountdown: 0
   timeBetweenWaves: 5
   waveText: {fileID: 909008862}
@@ -10496,6 +10525,17 @@ MonoBehaviour:
   fourthAnimation: {fileID: 1169877537}
   fifthAnimation: {fileID: 1035951206}
   sixthAnimation: {fileID: 336880164}
+  level_text: 0
+  firstText: {fileID: 1713973301}
+  secondText: {fileID: 1387452786}
+  thirdText: {fileID: 772002519}
+  fourthText: {fileID: 434151932}
+  fifthText: {fileID: 1631954022}
+  dialogue: {fileID: 102504752}
+  dialogue2: {fileID: 1342469381}
+  dialogue3: {fileID: 275396801}
+  dialogue4: {fileID: 2123686504}
+  dialogue5: {fileID: 1442536426}
 --- !u!4 &2120978633
 Transform:
   m_ObjectHideFlags: 0
@@ -10536,7 +10576,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2123686503}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e20f633c6b6d6497b846cb405dc47646, type: 3}
+  m_Script: {fileID: 11500000, guid: e99571151149148bbb074b2bc1333e13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 210033121}
@@ -10555,6 +10595,7 @@ MonoBehaviour:
   - 'Private: We''ve got to think like the enemy, sir!'
   typingSpeed: 0.02
   continueButton: {fileID: 949742014}
+  text: 0
 --- !u!224 &2123686505
 RectTransform:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ public class Spawner : MonoBehaviour
     public float spawnMostWait;
     public float spawnLeastWait;
     public int startWait;
+    public WaveManager waveManager;
 
     bool on = false;
     
@@ -41,6 +42,8 @@ public class Spawner : MonoBehaviour
         on = true;
         coroutine = waitSpawner();
         StartCoroutine(coroutine);
+        waveManager.waveCountdown -= Time.deltaTime;
+
     }
 
     void SpawnShip()

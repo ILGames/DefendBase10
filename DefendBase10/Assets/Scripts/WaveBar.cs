@@ -7,6 +7,7 @@ public class WaveBar : MonoBehaviour
 {
     private Slider slider;
     public float newprogress;
+    public WaveManager waveManager;
 
 
     private void Awake()
@@ -14,8 +15,12 @@ public class WaveBar : MonoBehaviour
         slider = gameObject.GetComponent<Slider>();
     }
 
-    void Update()
+    public void Update()
     {
+        while(waveManager.switchy == false)
+        {
+            Stop();
+        }
         newprogress -= Time.deltaTime;
         //Debug.Log("This is " + newProgress);
         slider.value = slider.maxValue - newprogress;
@@ -26,5 +31,11 @@ public class WaveBar : MonoBehaviour
         slider.value = 0;
         slider.maxValue = newMax;
         newprogress = newMax;
+    }
+
+    public void Stop()
+    {
+        slider.value = 0;
+        newprogress = 0;
     }
 }
