@@ -23,6 +23,6 @@ public class CannonBar : MonoBehaviour
 
     public void ResetBar()
     {
-        newprogress = 0;
+        newprogress = 0;  
     }
 }
