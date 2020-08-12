@@ -5,8 +5,6 @@ using System.Threading;
 
 public class WaveManager : MonoBehaviour
 {
-
-
     [System.Serializable]
     public class Wave
     {
@@ -43,7 +41,6 @@ public class WaveManager : MonoBehaviour
     public Dialogue dialogue4;
     public Dialogue dialogue5;
 
-    public 
 
 
     void Start()
@@ -58,9 +55,8 @@ public class WaveManager : MonoBehaviour
         {
             WaveCompleted();
         }
-        else if (waves[currentWave].isDialogue && !waves[currentWave].dialogue.text)
+        else if (waves[currentWave].isDialogue && waves[currentWave].dialogue.text)
         {
-
             WaveCompleted();
         }
     }
@@ -74,7 +70,6 @@ public class WaveManager : MonoBehaviour
         {
             Debug.Log("Completed all waves!");
             waveCountdown = float.PositiveInfinity;
-            spawner.StopSpawning();
         }
         else
         {
@@ -113,7 +108,7 @@ public class WaveManager : MonoBehaviour
     {
         yield return new WaitForSeconds(timeBetweenWaves);
         StartWave();
-        //waveBar.Update();
+        waveBar.Update();
     }
 
     public Wave getCurrentWave()
