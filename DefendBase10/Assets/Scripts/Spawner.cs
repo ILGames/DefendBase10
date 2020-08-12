@@ -48,10 +48,10 @@ public class Spawner : MonoBehaviour
 
     void SpawnShip()
     {
-        Vector3 spawnPosition = new Vector3(Random.Range(2456, spawnValues.x), 2650, 17853);
+        Vector3 spawnPosition = new Vector3( Random.Range(-500, 500), 0, 0);
 
-        GameObject newShip = Instantiate(enemy, spawnPosition, transform.rotation);
-        newShip.transform.SetParent(transform);
+        GameObject newShip = Instantiate(enemy, transform);
+        newShip.transform.localPosition = spawnPosition;
         ShipValue valueScript = newShip.GetComponent<ShipValue>();
         valueScript.RandomizeValue();
 

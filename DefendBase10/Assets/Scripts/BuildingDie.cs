@@ -11,10 +11,10 @@ public class BuildingDie : MonoBehaviour
 
     void BuildingList()
     {
-        if (other.transform.parent != spawner)
+        /*if (other.transform.parent != spawner)
         {
             return;
-        }
+        }*/
 
         List<GameObject> children = new List<GameObject>();
         Transform[] building = gameObject.GetComponentsInChildren<Transform>();
@@ -29,7 +29,7 @@ public class BuildingDie : MonoBehaviour
 
         foreach (Transform child in spawner)
         {
-            if (child.transform.position.y < gameobject.transform.position.y)
+            if (child.transform.position.y < gameObject.transform.position.y)
             {
                 Destroy(buildings);
             }

@@ -44,11 +44,18 @@ public class Cannon : MonoBehaviour
                     lowY = child.position.y;
                 }
             }
-
-            if (lowest != null)
-            {
-                KillShip(lowest);
-            }
+        }
+        if (lowest != null)
+        {
+            Vector3 shipPos = lowest.transform.position;
+            Vector3 cannonPos = pivot.transform.position;
+            shipPos.z = 0;
+            cannonPos.z = 0;
+            Vector3 cannon2ShipVector = shipPos - cannonPos;
+            cannon2ShipVector.Normalize();
+            Quaternion cannonRot = Quaternion.LookRotation(-Vector3.forward, cannon2ShipVector);
+            pivot.transform.rotation = cannonRot;
+            KillShip(lowest);
         }
     }
 
