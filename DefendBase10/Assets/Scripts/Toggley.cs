@@ -17,6 +17,18 @@ public class Toggley : MonoBehaviour
 	public void OnChangeValue()
 	{
 		bool onoffSwitch = gameObject.GetComponent<Toggle>().isOn;
+		if (Input.touchCount > 0)
+        {
+			switchOn.SetActive(true);
+			switchOff.SetActive(false);
+			value = 1;
+		}
+		if (Input.touchCount == 0)
+        {
+			switchOn.SetActive(false);
+			switchOff.SetActive(true);
+			value = 0;
+		}
 		if (onoffSwitch)
 		{
 			switchOn.SetActive(true);

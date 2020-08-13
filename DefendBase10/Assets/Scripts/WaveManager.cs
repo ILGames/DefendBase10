@@ -38,6 +38,7 @@ public class WaveManager : MonoBehaviour
     public SixthAnimation sixthAnimation;
 
 
+
     void Start()
     {
         StartWave();
