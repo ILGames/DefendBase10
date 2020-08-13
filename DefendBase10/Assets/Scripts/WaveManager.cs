@@ -35,12 +35,6 @@ public class WaveManager : MonoBehaviour
     public FourthAnimation fourthAnimation;
     public FifthAnimation fifthAnimation;
     public SixthAnimation sixthAnimation;
-    public Dialogue dialogue;
-    public Dialogue dialogue2;
-    public Dialogue dialogue3;
-    public Dialogue dialogue4;
-    public Dialogue dialogue5;
-
 
 
     void Start()
@@ -55,7 +49,7 @@ public class WaveManager : MonoBehaviour
         {
             WaveCompleted();
         }
-        else if (waves[currentWave].isDialogue && waves[currentWave].dialogue.text)
+        else if (waves[currentWave].isDialogue && !waves[currentWave].dialogue.notFinished)
         {
             WaveCompleted();
         }
@@ -65,11 +59,10 @@ public class WaveManager : MonoBehaviour
         Debug.Log("wave Completed! " + currentWave);
 
         spawner.StopSpawning();
-
+        waveCountdown = float.PositiveInfinity;
         if (currentWave + 1 > waves.Length - 1)
         {
             Debug.Log("Completed all waves!");
-            waveCountdown = float.PositiveInfinity;
         }
         else
         {

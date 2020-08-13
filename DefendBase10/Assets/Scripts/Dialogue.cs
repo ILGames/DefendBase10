@@ -10,12 +10,12 @@ public class Dialogue : MonoBehaviour
     private int index;
     public float typingSpeed;
     public GameObject continueButton;
-    public bool text;
+    public bool notFinished = true;
 
     void Awake()
     {
         StartCoroutine(Type());
-        text = true;
+        notFinished = true;
     }
     void Update()
     {
@@ -45,7 +45,7 @@ public class Dialogue : MonoBehaviour
         {
             textDisplay.text = "";
             continueButton.SetActive(false);
-            text = false;
+            notFinished = false;
         }
     }
 }
