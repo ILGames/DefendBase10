@@ -10,6 +10,7 @@ public class Dialogue : MonoBehaviour
     private int index;
     public float typingSpeed;
     public GameObject continueButton;
+    public GameObject image;
     public bool notFinished = true;
 
     void Awake()
@@ -46,6 +47,7 @@ public class Dialogue : MonoBehaviour
             textDisplay.text = "";
             continueButton.SetActive(false);
             notFinished = false;
+            image.SetActive(false);
         }
     }
 }
