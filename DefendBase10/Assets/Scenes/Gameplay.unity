@@ -5612,6 +5612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newprogress: 0
+  stopped: 1
 --- !u!1 &991275605
 GameObject:
   m_ObjectHideFlags: 0
@@ -10704,6 +10705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waveBar: {fileID: 9856289}
   spawner: {fileID: 1478399938}
+  cannonBar: {fileID: 952896469}
   waves:
   - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
     lengthOfTime: 15

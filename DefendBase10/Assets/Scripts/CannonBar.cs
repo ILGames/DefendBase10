@@ -9,6 +9,7 @@ public class CannonBar : MonoBehaviour
 {
     private Slider slider;
     public float newprogress;
+    public bool stopped = true;
     
     private void Awake()
     {
@@ -17,12 +18,25 @@ public class CannonBar : MonoBehaviour
 
     void Update()
     {
-        newprogress += Time.deltaTime;
-        slider.value = slider.minValue + newprogress;
+        if (!stopped)
+        {
+            newprogress += Time.deltaTime;
+            slider.value = slider.minValue + newprogress;
+        }
     }
 
     public void ResetBar()
     {
         newprogress = 0;  
+    }
+    public void Stop()
+    {
+        stopped = true;
+        slider.value = 0;
+        newprogress = 0;
+    }
+    public void Start()
+    {
+        stopped = false;
     }
 }

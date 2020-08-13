@@ -21,6 +21,7 @@ public class WaveManager : MonoBehaviour
 
     public WaveBar waveBar;
     public Spawner spawner;
+    public CannonBar cannonBar;
     public Wave[] waves;
     //Store index of the wave we want to be creating next
     private int currentWave = 0;
@@ -82,6 +83,8 @@ public class WaveManager : MonoBehaviour
             spawner.StartSpawning();
             waveBar.ResetBar(waveCountdown);
             waveText.ResetText();
+            cannonBar.ResetBar();
+            cannonBar.Start();
             buttonAppear.ResetDigits();
             firstAnimation.ResetDigits();
             secondTransition.ResetDigits();
@@ -92,6 +95,7 @@ public class WaveManager : MonoBehaviour
         }
         else
         {
+            cannonBar.Stop();
             Debug.Log("Starting Dialogue "+ waves[currentWave].dialogue.gameObject.transform.parent.gameObject.name);
             waves[currentWave].dialogue.gameObject.transform.parent.gameObject.SetActive(true);
         }
