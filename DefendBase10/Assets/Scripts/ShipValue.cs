@@ -19,7 +19,7 @@ public class ShipValue : MonoBehaviour
 
         if (max < 0)
         {
-            max = (int)Mathf.Pow(2,buttonsShowing.buttonsAnimated) - 1;
+            max = (int)Mathf.Pow(2,buttonsShowing.buttonsAnimated);
            // Debug.Log("Max = " + max);
         }
         SetValue(Random.Range(0, max));
