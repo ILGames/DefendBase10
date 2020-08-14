@@ -15,7 +15,7 @@ public class ShipDeath : MonoBehaviour
         form.DOLocalRotate(new Vector3(0, 0, 600), 2f, RotateMode.FastBeyond360);
         float xPos = transform.position.x;
         //Debug.Log("Ship at " + xPos);
-        transform.DOMove(new Vector3(xPos > 2700? xPos + 400 : xPos - 400, transform.position.y + 400, transform.position.z), 2f);
+        transform.DOMove(new Vector3(xPos > 0? xPos + 500 : xPos - 500, transform.position.y + 400, transform.position.z), 2f);
     }
 
     IEnumerator destroySelf()

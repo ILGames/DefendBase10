@@ -1,40 +1,92 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
-using System.Diagnostics;
-using System.Security.Cryptography;
 using UnityEngine;
+using DG.Tweening;
 
 public class BuildingDie : MonoBehaviour
 {
     public Transform spawner;
-    public Cannon cannon;
-    
-    void BuildingList()
+
+    List<GameObject> excluded;
+
+    float buildingKillCooldown = 0;
+
+    void Start()
     {
-        /*if (other.transform.parent != spawner)
-        {
-            return;
-        }*/
+        excluded = new List<GameObject>();
+    }
 
+    void Update()
+    {
+        CheckIfBuildingShouldDie();
+        buildingKillCooldown -= Time.deltaTime;
+    }
+
+    public GameObject ChooseBuildingToKill()
+    {
         List<GameObject> children = new List<GameObject>();
-        Transform[] building = gameObject.GetComponentsInChildren<Transform>();
+        Transform[] buildings = gameObject.GetComponentsInChildren<Transform>();
 
-        foreach (Transform t in building)
+        GameObject markedForDeath = null;
+        float randomVal = Random.value;
+        int counter = 1;
+
+        List<Transform> included = new List<Transform>();
+        foreach (Transform child in buildings)
         {
-            if (t != null && t.gameObject != null)
-                children.Add(t.gameObject);
-        }
-
-        GameObject buildings = children[Random.Range(0, children.Count)];
-
-        foreach (Transform child in spawner)
-        { 
-            if (child.transform.position.y < -1278.0)
+            if (!excluded.Contains(child.gameObject))
             {
-                buildings.SetActive(false);
-                //cannon.KillShip();
+                included.Add(child);
             }
         }
+
+        foreach (Transform child in included)
+        {
+            if (randomVal < counter * (1f / (float)included.Count))
+            {
+                markedForDeath = child.gameObject;
+                break;
+            }
+            counter++;
+        }
+        return markedForDeath;
+    }
+
+    void CheckIfBuildingShouldDie()
+    {
+        
+        foreach (Transform child in spawner)
+        {
+            if (child.transform.localPosition.y < -1278.0 && buildingKillCooldown <= 0)
+            {
+                Debug.Log("Ship Below Line");
+                GameObject doomed = ChooseBuildingToKill();
+                Kill(doomed);
+                child.gameObject.GetComponent<ShipDeath>().Die();
+            }
+        }
+    }
+
+    void Kill(GameObject doomed)
+    {
+        buildingKillCooldown = 1f;
+        excluded.Add(doomed);
+        Debug.Log("Building Dying "+doomed.name);
+        doomed.transform.DOMove(new Vector3(transform.position.x, transform.position.y - 1000, transform.position.z), 3f);
+    }
+
+    public void ReviveRandom()
+    {
+
+    }
+
+    void Revive(GameObject resurrected)
+    {
+        if (!excluded.Contains(resurrected))
+        {
+            return;
+        }
+        excluded.Remove(resurrected);
     }
 }
