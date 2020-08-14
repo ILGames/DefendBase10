@@ -30,7 +30,7 @@ public class BuildingDie : MonoBehaviour
 
         foreach (Transform child in spawner)
         { 
-            if ((child.transform.position.x, child.transform.position.y, child.transform.position.z) == (child.transform.position.x, -12.0, child.transform.position.z))
+            if (child.transform.position.y < -1278.0)
             {
                 buildings.SetActive(false);
                 //cannon.KillShip();
