@@ -7,8 +7,9 @@ using UnityEngine;
 
 public class BuildingDie : MonoBehaviour
 {
-    public Transform spawner; 
-
+    public Transform spawner;
+    public Cannon cannon;
+    
     void BuildingList()
     {
         /*if (other.transform.parent != spawner)
@@ -28,10 +29,11 @@ public class BuildingDie : MonoBehaviour
         GameObject buildings = children[Random.Range(0, children.Count)];
 
         foreach (Transform child in spawner)
-        {
-            if (child.transform.position.y < gameObject.transform.position.y)
+        { 
+            if ((child.transform.position.x, child.transform.position.y, child.transform.position.z) == (child.transform.position.x, -12.0, child.transform.position.z))
             {
-                Destroy(buildings);
+                buildings.SetActive(false);
+                //cannon.KillShip();
             }
         }
     }

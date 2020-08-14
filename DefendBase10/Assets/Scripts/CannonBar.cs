@@ -11,6 +11,7 @@ public class CannonBar : MonoBehaviour
     public float newprogress;
     public bool stopped = true;
     
+    
     private void Awake()
     {
         slider = gameObject.GetComponent<Slider>();

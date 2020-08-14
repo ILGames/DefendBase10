@@ -11,12 +11,14 @@ public class Cannon : MonoBehaviour
     public Transform pivot;
     public float startWait = 2f;
     public float fireWait = 5f;
+    public float beamWait = 1f;
     public CannonBar bar;
-
+    public GameObject Beam;
 
     void Start()
     {
         StartCoroutine(waitFire());
+        Beam.SetActive(false);
     }
 
     void Update()
@@ -30,6 +32,7 @@ public class Cannon : MonoBehaviour
         //Debug.Log("Button ="+buttonValue.buttonValue);
 
         bar.ResetBar();
+
 
         float lowY = 999999999;
         GameObject lowest = null;
@@ -55,11 +58,23 @@ public class Cannon : MonoBehaviour
             cannon2ShipVector.Normalize();
             Quaternion cannonRot = Quaternion.LookRotation(-Vector3.forward, cannon2ShipVector);
             pivot.transform.rotation = cannonRot;
+            Beam.SetActive(true);
+            StartCoroutine(waitBeam());
+            
             KillShip(lowest);
+           
         }
     }
 
+    IEnumerator waitBeam() 
+    {
+        Beam.SetActive(true);
 
+        yield return new WaitForSeconds(beamWait);
+
+        Beam.SetActive(false);
+    }
+    
     IEnumerator waitFire()
     {
         yield return new WaitForSeconds(startWait);
@@ -72,8 +87,9 @@ public class Cannon : MonoBehaviour
         }
     }
 
-    void KillShip(GameObject ship)
+    public void KillShip(GameObject ship)
     {
         ship.GetComponent<ShipDeath>().Die();
     }
  }
+
