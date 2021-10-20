@@ -37,11 +37,16 @@ public class WaveManager : MonoBehaviour
     public FifthAnimation fifthAnimation;
     public SixthAnimation sixthAnimation;
 
+    public Cannon cannon;
+    public Animator cannon_animator;
+    public ControlPanel control_panel;
+
 
 
     void Start()
     {
         StartWave();
+        cannon_animator.speed = 0f;
     }
     void Update()
     {
@@ -60,6 +65,17 @@ public class WaveManager : MonoBehaviour
     {
         Debug.Log("wave Completed! " + currentWave);
 
+        // hide the cannon after each wave (none dialogue)
+        if(!waves[currentWave].isDialogue)
+        {
+            cannon.Stop();
+            cannon.Hide();
+            cannonBar.Stop();
+            //cannon_animator.speed = 1;
+            //cannon_animator.SetFloat("Direction", -1f);
+            //cannon_animator.Play("Take 001", 0, 1f);
+        }
+
         spawner.StopSpawning();
         waveCountdown = float.PositiveInfinity;
         if (currentWave + 1 > waves.Length - 1)
@@ -71,16 +87,17 @@ public class WaveManager : MonoBehaviour
             StartCoroutine(waitToBeginNextWave());
             currentWave++;
         }
-
     }
 
     void StartWave()
     {
-        waveCountdown = waves[currentWave].lengthOfTime;
+        Wave wave = waves[currentWave];
+        waveCountdown = wave.lengthOfTime;
         //TODO: Tell Spawner how fast to spawn, etc.
-        if (!waves[currentWave].isDialogue)
+        if (!wave.isDialogue)
         {
             Debug.Log("Starting Ship Wave");
+            //cannon_animator.Play("Take 001", -1, 0f);
             spawner.StartSpawning();
             waveBar.ResetBar(waveCountdown);
             waveText.ResetText();
@@ -93,12 +110,20 @@ public class WaveManager : MonoBehaviour
             fourthAnimation.ResetDigits();
             fifthAnimation.ResetDigits();
             sixthAnimation.ResetDigits();
+
+            control_panel.Next(wave);
+
+            cannon.Show();
+            //cannon_animator.speed = 1;
+            //cannon_animator.SetFloat("Direction", 1f);
+            //cannon_animator.Play("Take 001", 0, 0f);
         }
         else
         {
+            
             cannonBar.Stop();
-            Debug.Log("Starting Dialogue "+ waves[currentWave].dialogue.gameObject.transform.parent.gameObject.name);
-            waves[currentWave].dialogue.gameObject.transform.parent.gameObject.SetActive(true);
+            Debug.Log("Starting Dialogue "+ wave.dialogue.gameObject.transform.parent.gameObject.name);
+            wave.dialogue.gameObject.transform.parent.gameObject.SetActive(true);
         }
     }
 

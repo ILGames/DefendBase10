@@ -15,6 +15,7 @@ public class BuildingDie : MonoBehaviour
     void Start()
     {
         excluded = new List<GameObject>();
+        excluded.Add(gameObject);   // exlude the main building container
     }
 
     void Update()
@@ -25,12 +26,7 @@ public class BuildingDie : MonoBehaviour
 
     public GameObject ChooseBuildingToKill()
     {
-        List<GameObject> children = new List<GameObject>();
         Transform[] buildings = gameObject.GetComponentsInChildren<Transform>();
-
-        GameObject markedForDeath = null;
-        float randomVal = Random.value;
-        int counter = 1;
 
         List<Transform> included = new List<Transform>();
         foreach (Transform child in buildings)
@@ -40,7 +36,10 @@ public class BuildingDie : MonoBehaviour
                 included.Add(child);
             }
         }
-
+        GameObject markedForDeath = null;
+        /*
+        float randomVal = Random.value;
+        int counter = 1;
         foreach (Transform child in included)
         {
             if (randomVal < counter * (1f / (float)included.Count))
@@ -49,6 +48,17 @@ public class BuildingDie : MonoBehaviour
                 break;
             }
             counter++;
+        }*/
+        // uses furthest away from center to destroy
+        float maxDist = 0;
+        foreach (Transform child in included)
+        {
+            float dist = Mathf.Abs(child.transform.localPosition.x);
+            if (dist > maxDist)
+            {
+                maxDist = dist;
+                markedForDeath = child.gameObject;
+            }
         }
         return markedForDeath;
     }

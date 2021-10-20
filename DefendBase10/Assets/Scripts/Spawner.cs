@@ -23,6 +23,26 @@ public class Spawner : MonoBehaviour
     {
         GameObject controlPanel = GameObject.Find("ControlPanel");
         buttonsShowing = controlPanel.GetComponent<ButtonsOnScreen>();
+
+
+        Camera camera = Camera.main;
+
+        float distanceFromCamera = camera.nearClipPlane + camera.transform.position.z; // Change this value if you want
+        Vector3 topLeft = camera.ViewportToWorldPoint(new Vector3(0, 1, distanceFromCamera));
+        Vector3 topRight = camera.ViewportToWorldPoint(new Vector3(1, 1, distanceFromCamera));
+
+        transform.position = new Vector3(transform.position.x, topLeft.y, transform.position.z);
+        return; 
+
+        Debug.Log("aaa "+Camera.main);
+        Debug.Log("aaa2 "+Screen.width);
+        Vector3 top_right = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
+        Vector3 bottom_left = Camera.main.ScreenToWorldPoint(Vector3.zero);
+
+        // update spawner position
+        Debug.Log(transform.position);
+        transform.position = new Vector3(transform.position.x, top_right.y, transform.position.z);
+        Debug.Log(transform.position);
     }
 
     public void StopSpawning()
@@ -33,6 +53,12 @@ public class Spawner : MonoBehaviour
         {
             StopCoroutine(coroutine);
             coroutine = null;
+        }
+        // any remaining ships need to animate off screen and go away
+        ShipRetreat[] reatreats = gameObject.GetComponentsInChildren<ShipRetreat>();
+        for (int i = 0; i < reatreats.Length; i++)
+        {
+            reatreats[i].Retreat();
         }
     }
 

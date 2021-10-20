@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Security.Cryptography;
 using UnityEngine;
-
+using DG.Tweening;
 
 public class Cannon : MonoBehaviour
 {
@@ -14,17 +14,41 @@ public class Cannon : MonoBehaviour
     public float beamWait = 1f;
     public CannonBar bar;
     public GameObject Beam;
+    public Light BeamLight;
+    private Animator animator;
 
+    private bool stopped = true;
     void Start()
     {
         StartCoroutine(waitFire());
         Beam.SetActive(false);
+        animator = gameObject.GetComponent<Animator>();
+        animator.speed = 0f;
+    }
+    public void Stop()
+    {
+        stopped = true;
     }
 
     void Update()
     {
+
     }
 
+    public void Show()
+    {
+        stopped = false;
+        animator.speed = 1;
+        animator.SetFloat("Direction", 1f);
+        animator.Play("Take 001", 0, 0f);
+    }
+    public void Hide()
+    {
+        Reset();
+        animator.speed = 1;
+        animator.SetFloat("Direction", -1f);
+        animator.Play("Take 001", 0, 1f);
+    }
     public void Fire()
     {
         GameObject ctrlPanel = GameObject.Find("ControlPanel");
@@ -62,10 +86,37 @@ public class Cannon : MonoBehaviour
             StartCoroutine(waitBeam());
             
             KillShip(lowest);
-           
+
+            // TODO animate light intensity to make it flash
+           AnimateLight();
         }
     }
-
+    void AnimateLight()
+    {
+        BeamLight.intensity = 50f;
+        DOTween.To(
+            () => BeamLight.intensity,
+            (value) => {
+                BeamLight.intensity = value;
+            },
+            0f,
+            1
+        );
+        BeamLight.range = 0f;
+        DOTween.To(
+            () => BeamLight.range,
+            (value) => {
+                BeamLight.range = 750 * Mathf.Sin(Mathf.PI * 2 * value );
+            },
+            1f,
+            1
+        );
+        //DOVirtual.DelayedCall(2, AnimateBanner);
+    }
+    public void Reset()
+    {
+        pivot.transform.rotation = Quaternion.LookRotation(-Vector3.forward, Vector3.up);
+    }
     IEnumerator waitBeam() 
     {
         Beam.SetActive(true);
@@ -81,7 +132,7 @@ public class Cannon : MonoBehaviour
 
         while (true)
         {
-            Fire();
+            if(!stopped)    Fire();
 
             yield return new WaitForSeconds(fireWait);
         }
