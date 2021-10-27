@@ -18,12 +18,15 @@ public class Cannon : MonoBehaviour
     private Animator animator;
 
     private bool stopped = true;
+    private AudioSource blastSound;
+
     void Start()
     {
         StartCoroutine(waitFire());
         Beam.SetActive(false);
         animator = gameObject.GetComponent<Animator>();
         animator.speed = 0f;
+        blastSound = GetComponent<AudioSource>();
     }
     public void Stop()
     {
@@ -83,6 +86,7 @@ public class Cannon : MonoBehaviour
             Quaternion cannonRot = Quaternion.LookRotation(-Vector3.forward, cannon2ShipVector);
             pivot.transform.rotation = cannonRot;
             Beam.SetActive(true);
+            blastSound.Play();
             StartCoroutine(waitBeam());
             
             KillShip(lowest);
