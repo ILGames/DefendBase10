@@ -47,7 +47,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void QuitGame()
     {
-        Application.Quit();
+        SceneManager.LoadScene("Title");
     }
     void EnableCanvas()
     {
