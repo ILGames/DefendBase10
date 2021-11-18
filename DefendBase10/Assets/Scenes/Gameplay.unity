@@ -14228,6 +14228,12 @@ MonoBehaviour:
   PauseMenuUI: {fileID: 795284499}
   pause: {fileID: 0}
   Canvas: {fileID: 316408107}
+  otherCanvasStuff:
+  - {fileID: 1188791303}
+  - {fileID: 1868520262}
+  - {fileID: 553546624}
+  - {fileID: 1050371271}
+  - {fileID: 9856287}
 --- !u!114 &1733200926
 MonoBehaviour:
   m_ObjectHideFlags: 0

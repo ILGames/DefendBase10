@@ -8,10 +8,16 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject PauseMenuUI;
-    public Toggle pause;
     public GameObject Canvas;
-     
-    
+
+    public GameObject[] otherCanvasStuff;
+    private bool[] otherCanvasStuffStates;
+
+    private void Start()
+    {
+        otherCanvasStuffStates = new bool[otherCanvasStuff.Length];
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -30,15 +36,43 @@ public class PauseMenu : MonoBehaviour
         PauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
-        pause.interactable = true;
+
+        //show other canvas stuff
+        GameObject thingy;
+        for (int i = 0; i < otherCanvasStuff.Length; i++)
+        {
+            thingy = otherCanvasStuff[i];
+
+            if (otherCanvasStuffStates[i])
+            {
+                thingy.SetActive(true);
+            }
+
+        }
     }
     public void Pause()
     {
         PauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
-        pause.interactable = false;
-        
+
+        //hide other canvas stuff
+        GameObject thingy;
+        for (int i = 0; i < otherCanvasStuff.Length; i++)
+        {
+            thingy = otherCanvasStuff[i];
+
+            if (thingy.activeSelf)
+            {
+                otherCanvasStuffStates[i] = true;
+                thingy.SetActive(false);
+            }
+            else
+            {
+                otherCanvasStuffStates[i] = false;
+            }
+
+        }
     }
     public void LoadMenu()
     {
