@@ -32,13 +32,15 @@ public class ShipDeath : MonoBehaviour
     }
     IEnumerator Boom()
     {
+        sheet.transform.parent = transform.parent;
+
         sheet.Frame = 0;
-        while(sheet.Frame < 80)
+        while(sheet.Frame < 79)
         {
             yield return new WaitForFixedUpdate();
             sheet.Frame++;
         }
-        
+        Destroy(sheet);
     }
     IEnumerator destroySelf()
     {
