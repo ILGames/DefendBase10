@@ -6,7 +6,13 @@ using UnityEngine.UI;
 public class MuteScript : MonoBehaviour
 {
     public Text text;
-    
+
+    void Awake()
+    {
+        ToggleMuted();
+        ToggleMuted();
+    }
+
     public void Mute()
     {
         AudioListener.volume = 0.0f;
