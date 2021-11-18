@@ -7,6 +7,8 @@ public class ShipDeath : MonoBehaviour
 {
     public bool dying = false;
     private SpriteSheet sheet;
+    public AudioClip[] explosionSounds;
+    private AudioSource soundSource;
 
     public void Start()
     {
@@ -16,7 +18,10 @@ public class ShipDeath : MonoBehaviour
         
         sheet = gameObject.GetComponentInChildren<SpriteSheet>();
         sheet.Frame = 79;   // can't se it on frame 79
+
+        soundSource = gameObject.GetComponent<AudioSource>();
     }
+
     public void Die()
     {
         dying = true;
@@ -29,7 +34,15 @@ public class ShipDeath : MonoBehaviour
         //Debug.Log("Ship at " + xPos);
         transform.DOMove(new Vector3(xPos > 0? xPos + 500 : xPos - 500, transform.position.y + 400, transform.position.z), 2f);
         StartCoroutine(Boom());
+        
     }
+
+    private void PlayRandomExplosion()
+    {
+        soundSource.clip = explosionSounds[Random.Range(0, explosionSounds.Length)];
+        soundSource.Play();
+    }
+
     IEnumerator Boom()
     {
         sheet.transform.parent = transform.parent;
@@ -38,6 +51,10 @@ public class ShipDeath : MonoBehaviour
         while(sheet.Frame < 79)
         {
             yield return new WaitForFixedUpdate();
+            if (sheet.Frame == 10)
+            {
+                PlayRandomExplosion();
+            }
             sheet.Frame++;
         }
         Destroy(sheet);
