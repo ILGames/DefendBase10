@@ -13,7 +13,7 @@ public class Dialogue : MonoBehaviour
     public GameObject image;
     public bool notFinished = true;
     public Animator endAnimator;
-
+    public bool runningCoroutine;
 
 
     void Awake()
@@ -21,6 +21,17 @@ public class Dialogue : MonoBehaviour
         //StartCoroutine(Type());
         NextSentence();
         notFinished = true;
+    }
+    void OnEnable()
+    {
+        if(runningCoroutine && textDisplay.maxVisibleCharacters < textDisplay.text.Length)
+        {
+            StartCoroutine(Type());
+        }
+    }
+    void OnDisable()
+    {
+        
     }
     void Update()
     {
@@ -32,13 +43,14 @@ public class Dialogue : MonoBehaviour
     }
     IEnumerator Type()
     {
-
+        runningCoroutine = true;
         // tried `textDisplay.textInfo.characterCount` but it returns 0
         while (textDisplay.maxVisibleCharacters < textDisplay.text.Length)
         {
             textDisplay.maxVisibleCharacters = textDisplay.maxVisibleCharacters + 1;
             yield return new WaitForSeconds(typingSpeed);
         }
+        runningCoroutine = false;
         /*
         foreach (char letter in sentences[index].ToCharArray())
         {
