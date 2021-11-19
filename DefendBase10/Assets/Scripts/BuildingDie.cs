@@ -68,6 +68,8 @@ public class BuildingDie : MonoBehaviour
         
         foreach (Transform child in spawner)
         {
+            // all the ship names are numeric so skip if name is not an int (i.e. an explosion quad)
+            if(!int.TryParse(child.gameObject.name, out int n))continue;
             if (child.transform.localPosition.y < -1278.0 && buildingKillCooldown <= 0)
             {
                 Debug.Log("Ship Below Line");
