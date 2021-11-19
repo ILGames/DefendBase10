@@ -13,8 +13,9 @@ public class WaveManager : MonoBehaviour
         public float lengthOfTime;
         public int level;
         public int digits;
-        public float maxspawn;
-        public float minspawn;
+        public float shipSpeed = 1;
+        public float maxspawn;  // TODO - unused, delete or use
+        public float minspawn;  // TODO - unused, delete or use
         public bool isDialogue;
         public Dialogue dialogue;
     }
@@ -58,7 +59,9 @@ public class WaveManager : MonoBehaviour
         }
         else if (waves[currentWave].isDialogue && !waves[currentWave].dialogue.notFinished)
         {
-            WaveCompleted();
+            // mark wave as no longer a dialogue and restart it - this used to also call WaveCompleted(), TODO check this more thoroughly
+            waves[currentWave].isDialogue = false;
+            StartWave();
         }
     }
     void WaveCompleted()
@@ -96,9 +99,9 @@ public class WaveManager : MonoBehaviour
         //TODO: Tell Spawner how fast to spawn, etc.
         if (!wave.isDialogue)
         {
-            Debug.Log("Starting Ship Wave");
+            Debug.LogFormat("Starting Ship Wave, speed {0}", wave.shipSpeed);
             //cannon_animator.Play("Take 001", -1, 0f);
-            spawner.StartSpawning();
+            spawner.StartSpawning(wave);
             waveBar.ResetBar(waveCountdown);
             waveText.ResetText();
             cannonBar.ResetBar();

@@ -14,6 +14,7 @@ public class Spawner : MonoBehaviour
     public WaveManager waveManager;
 
     bool on = false;
+    float shipSpeed;
     
     IEnumerator coroutine;
 
@@ -62,9 +63,12 @@ public class Spawner : MonoBehaviour
         }
     }
 
-    public void StartSpawning()
+    public void StartSpawning(WaveManager.Wave wave)
     {
         Debug.Log("turning on spawner");
+        this.shipSpeed = wave.shipSpeed;
+        this.spawnLeastWait = wave.minspawn;
+        this.spawnMostWait = wave.maxspawn;
         on = true;
         coroutine = waitSpawner();
         StartCoroutine(coroutine);
@@ -81,6 +85,10 @@ public class Spawner : MonoBehaviour
         ShipValue valueScript = newShip.GetComponent<ShipValue>();
         valueScript.RandomizeValue();
 
+        FallScript fallScript = newShip.GetComponent<FallScript>();
+        Debug.LogFormat("Ship speed orig {0}", fallScript.downwardSpeed);
+        fallScript.downwardSpeed *= this.shipSpeed;
+        Debug.LogFormat("Ship speed post {0}", fallScript.downwardSpeed);
         newShip.name = "" + valueScript.value;
     }
 
