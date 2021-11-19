@@ -57,7 +57,7 @@ public class ShipDeath : MonoBehaviour
             }
             sheet.Frame++;
         }
-        Destroy(sheet);
+        Destroy(sheet); // TODO this seems not to be working, find out why - still left in hierarcy
     }
     IEnumerator destroySelf()
     {
