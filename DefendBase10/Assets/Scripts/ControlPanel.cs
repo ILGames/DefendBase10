@@ -23,6 +23,7 @@ public class ControlPanel : MonoBehaviour
     {
         int digits = wave.digits;
         index = digits;
+        Debug.LogFormat("ControlPanel: Next() level={0} digits={1} time={2} ",wave.level, wave.digits, wave.lengthOfTime);
         for (int i = 0; i < buttons.Length; i++)
         {
             Toggley button = buttons[i];
