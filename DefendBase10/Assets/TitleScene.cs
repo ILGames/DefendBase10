@@ -18,6 +18,8 @@ public class TitleScene : MonoBehaviour
     float bannerHeight;
     void Start()
     {
+        Time.timeScale = 1f;    // ensure not paused any more
+    
         // 60 second sleep timeout
         Screen.sleepTimeout = 60;
 
