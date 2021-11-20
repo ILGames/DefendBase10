@@ -13,7 +13,10 @@ public class WaveText : MonoBehaviour
 
     void Update()
     {
-        textDisplay.text = sentences[index];
+        if (sentences.Length>index)
+        {
+            textDisplay.text = sentences[index];
+        }
     }
     public void ResetText()
     {

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 public class LoadGame : MonoBehaviour
 {
     /* Custom cursor if required
@@ -42,7 +44,7 @@ public class LoadGame : MonoBehaviour
     }
     public void Load()
     {
-        Application.LoadLevel("Gameplay");
+        SceneManager.LoadScene("Gameplay");
     }
     public void OnMouseOver()
     {
