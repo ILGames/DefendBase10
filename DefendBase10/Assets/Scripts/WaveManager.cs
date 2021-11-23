@@ -14,6 +14,7 @@ public class WaveManager : MonoBehaviour
         public int level;
         public int digits;
         public float shipSpeed = 1;
+        public float cannonCooldown = 5f;
         public float maxspawn;  // TODO - unused, delete or use
         public float minspawn;  // TODO - unused, delete or use
         public bool isDialogue;
@@ -104,6 +105,11 @@ public class WaveManager : MonoBehaviour
             spawner.StartSpawning(wave);
             waveBar.ResetBar(waveCountdown);
             waveText.ResetText();
+            if (wave.cannonCooldown != 0)
+            {
+                cannon.fireWait = wave.cannonCooldown;
+                cannonBar.SetMax(wave.cannonCooldown);
+            }
             cannonBar.ResetBar();
             cannonBar.Start();
             buttonAppear.ResetDigits();

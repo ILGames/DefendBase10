@@ -76,14 +76,21 @@ public class Spawner : MonoBehaviour
 
     }
 
-    void SpawnShip()
+    void SpawnShip(int num = -1)
     {
         Vector3 spawnPosition = new Vector3( Random.Range(-475, 475), 0, 0);
 
         GameObject newShip = Instantiate(enemy, transform);
         newShip.transform.localPosition = spawnPosition;
         ShipValue valueScript = newShip.GetComponent<ShipValue>();
-        valueScript.RandomizeValue();
+        if(num < 0)
+        {
+            valueScript.RandomizeValue();
+        }
+        else
+        {
+            valueScript.SetValue(num);
+        }
 
         FallScript fallScript = newShip.GetComponent<FallScript>();
         Debug.LogFormat("Ship speed orig {0}", fallScript.downwardSpeed);

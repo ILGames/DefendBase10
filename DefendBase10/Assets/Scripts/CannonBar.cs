@@ -11,7 +11,6 @@ public class CannonBar : MonoBehaviour
     public float newprogress;
     public bool stopped = true;
     
-    
     private void Awake()
     {
         slider = gameObject.GetComponent<Slider>();
@@ -39,5 +38,9 @@ public class CannonBar : MonoBehaviour
     public void Start()
     {
         stopped = false;
+    }
+    public void SetMax(float maxValue = 5f)
+    {
+        slider.maxValue = maxValue;
     }
 }
