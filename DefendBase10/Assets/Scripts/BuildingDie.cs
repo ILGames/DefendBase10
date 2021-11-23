@@ -2,20 +2,26 @@
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using DG.Tweening;
 
 public class BuildingDie : MonoBehaviour
 {
+    [SerializeField]
+    public WaveManager waveManager;
+
     public Transform spawner;
 
-    List<GameObject> excluded;
+    public List<GameObject> excluded;
 
     float buildingKillCooldown = 0;
 
+    public GameObject gameOverPanel;
+
     void Start()
     {
-        excluded = new List<GameObject>();
-        excluded.Add(gameObject);   // exlude the main building container
+        excluded.Add(gameObject);
+        gameOverPanel.SetActive(false);
     }
 
     void Update()
@@ -83,6 +89,15 @@ public class BuildingDie : MonoBehaviour
     void Kill(GameObject doomed)
     {
         buildingKillCooldown = 1f;
+
+        if (!doomed) // there are no buildings left to kill
+        {
+            waveManager.enabled = false;
+            gameOverPanel.SetActive(true);
+            StartCoroutine(BackToTitle());
+            return;
+        }
+
         excluded.Add(doomed);
         Debug.Log("Building Dying "+doomed.name);
         doomed.transform.DOMove(new Vector3(transform.position.x, transform.position.y - 1000, transform.position.z), 3f);
@@ -100,5 +115,11 @@ public class BuildingDie : MonoBehaviour
             return;
         }
         excluded.Remove(resurrected);
+    }
+
+    IEnumerator BackToTitle()
+    {
+        yield return new WaitForSeconds(5.0f);
+        SceneManager.LoadScene("Title");
     }
 }
