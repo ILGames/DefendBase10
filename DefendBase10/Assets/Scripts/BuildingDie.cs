@@ -9,14 +9,11 @@ public class BuildingDie : MonoBehaviour
 {
     [SerializeField]
     public WaveManager waveManager;
-
     public Transform spawner;
-
     public List<GameObject> excluded;
-
     float buildingKillCooldown = 0;
-
     public GameObject gameOverPanel;
+    public AudioSource audioSource;
 
     void Start()
     {
@@ -101,6 +98,7 @@ public class BuildingDie : MonoBehaviour
         excluded.Add(doomed);
         Debug.Log("Building Dying "+doomed.name);
         doomed.transform.DOMove(new Vector3(transform.position.x, transform.position.y - 1000, transform.position.z), 3f);
+        audioSource.Play();
     }
 
     public void ReviveRandom()
