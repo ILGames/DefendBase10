@@ -52,12 +52,7 @@ public class Cannon : MonoBehaviour
     }
     public void Hide()
     {
-        audioSource.clip = collapseSound;
-        audioSource.Play();
-        Reset();
-        animator.speed = 1;
-        animator.SetFloat("Direction", -1f);
-        animator.Play("Take 001", 0, 1f);
+        StartCoroutine(DelayedHide());
     }
     public void Fire()
     {
@@ -153,6 +148,17 @@ public class Cannon : MonoBehaviour
     public void KillShip(GameObject ship)
     {
         ship.GetComponent<ShipDeath>().Die();
+    }
+
+    IEnumerator DelayedHide()
+    {
+        yield return new WaitForSeconds(1f);
+        audioSource.clip = collapseSound;
+        audioSource.Play();
+        Reset();
+        animator.speed = 1;
+        animator.SetFloat("Direction", -1f);
+        animator.Play("Take 001", 0, 1f);
     }
  }
 
