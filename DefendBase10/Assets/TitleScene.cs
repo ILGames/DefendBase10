@@ -35,9 +35,11 @@ public class TitleScene : MonoBehaviour
        // lineColor = lineImage.color;
 
         GameObject fader = GameObject.Find("fader");
-        image = fader.GetComponent<Image>();
-        color = image.color;
-
+        if(fader != null)
+        {
+            image = fader.GetComponent<Image>();
+            color = image.color;
+        }
 /*
         float alpha = color.a;
         var sequence = DOTween.Sequence();
