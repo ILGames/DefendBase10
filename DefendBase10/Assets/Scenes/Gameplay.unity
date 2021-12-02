@@ -21374,11 +21374,11 @@ MonoBehaviour:
     isDialogue: 1
     dialogue: {fileID: 102504752}
   - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
-    lengthOfTime: 20
+    lengthOfTime: 25
     level: 2
     digits: 2
     shipSpeed: 1
-    cannonCooldown: 5
+    cannonCooldown: 4
     maxspawn: 6
     minspawn: 5
     isDialogue: 1
@@ -21404,21 +21404,21 @@ MonoBehaviour:
     isDialogue: 0
     dialogue: {fileID: 0}
   - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
-    lengthOfTime: 10
+    lengthOfTime: 16
     level: 6
     digits: 3
     shipSpeed: 1
     cannonCooldown: 5
-    maxspawn: 6
+    maxspawn: 5
     minspawn: 5
     isDialogue: 1
     dialogue: {fileID: 1919463758}
   - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
     lengthOfTime: 25
     level: 7
-    digits: 2
+    digits: 3
     shipSpeed: 1
-    cannonCooldown: 5
+    cannonCooldown: 3
     maxspawn: 4
     minspawn: 2.4
     isDialogue: 0
