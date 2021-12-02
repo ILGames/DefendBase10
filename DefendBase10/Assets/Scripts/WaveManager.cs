@@ -24,6 +24,7 @@ public class WaveManager : MonoBehaviour
     public WaveBar waveBar;
     public Spawner spawner;
     public CannonBar cannonBar;
+    public GameObject tutorialHighlight;
     public Wave[] waves;
     //Store index of the wave we want to be creating next
     private int currentWave = 0;
@@ -100,7 +101,7 @@ public class WaveManager : MonoBehaviour
         //TODO: Tell Spawner how fast to spawn, etc.
         if (!wave.isDialogue)
         {
-            Debug.LogFormat("Starting Ship Wave, speed {0}", wave.shipSpeed);
+            Debug.LogFormat("Starting Wave {0}, speed {1}", currentWave, wave.shipSpeed);
             //cannon_animator.Play("Take 001", -1, 0f);
             spawner.StartSpawning(wave);
             waveBar.ResetBar(waveCountdown);
@@ -126,6 +127,10 @@ public class WaveManager : MonoBehaviour
             //cannon_animator.speed = 1;
             //cannon_animator.SetFloat("Direction", 1f);
             //cannon_animator.Play("Take 001", 0, 0f);
+            if (currentWave==0)
+            {
+                StartCoroutine(WaitForBlink(5));
+            }
         }
         else
         {
@@ -141,6 +146,25 @@ public class WaveManager : MonoBehaviour
         yield return new WaitForSeconds(timeBetweenWaves);
         StartWave();
         waveBar.Update();
+    }
+
+    IEnumerator WaitForBlink(uint times)
+    {
+        yield return new WaitForSeconds(5f);
+        StartCoroutine(BlinkHighlight(times));
+    }
+
+    IEnumerator BlinkHighlight(uint times)
+    {
+        if (times > 0)
+        {
+            tutorialHighlight.SetActive(true);
+            yield return new WaitForSeconds(0.75f);
+            tutorialHighlight.SetActive(false);
+            yield return new WaitForSeconds(0.25f);
+            StartCoroutine(BlinkHighlight(times - 1));
+        }
+
     }
 
     public Wave getCurrentWave()
