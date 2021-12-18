@@ -48,6 +48,10 @@ public class WaveManager : MonoBehaviour
 
     void Start()
     {
+        if(TitleScene.cont && PlayerPrefs.HasKey("wave"))
+        {
+            currentWave = PlayerPrefs.GetInt("wave");
+        }
         StartWave();
         cannon_animator.speed = 0f;
     }
@@ -69,7 +73,7 @@ public class WaveManager : MonoBehaviour
     void WaveCompleted()
     {
         Debug.Log("wave Completed! " + currentWave);
-
+        
         // hide the cannon after each wave (none dialogue)
         if(!waves[currentWave].isDialogue)
         {
@@ -91,11 +95,19 @@ public class WaveManager : MonoBehaviour
         {
             StartCoroutine(waitToBeginNextWave());
             currentWave++;
+            PlayerPrefs.SetInt("wave", currentWave);
         }
     }
 
     void StartWave()
     {
+        int totalGameWaves = 0;
+        for (int i = 0; i <= currentWave; i++)
+        {
+            if(!waves[i].isDialogue) totalGameWaves++;
+        }
+        waveText.ResetText(totalGameWaves);
+
         Wave wave = waves[currentWave];
         waveCountdown = wave.lengthOfTime;
         //TODO: Tell Spawner how fast to spawn, etc.
@@ -105,7 +117,7 @@ public class WaveManager : MonoBehaviour
             //cannon_animator.Play("Take 001", -1, 0f);
             spawner.StartSpawning(wave);
             waveBar.ResetBar(waveCountdown);
-            waveText.ResetText();
+
             if (wave.cannonCooldown != 0)
             {
                 cannon.fireWait = wave.cannonCooldown;

@@ -3,9 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
+
 public class TitleScene : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public static bool cont = false;
+
+    public TextMeshProUGUI text_new;
+    public TextMeshProUGUI text_continue;
+    public TextMeshProUGUI text_reset;
+
     Transform bannerTransform;
     Image bannerImage;
     Color bannerColor;
@@ -18,6 +26,8 @@ public class TitleScene : MonoBehaviour
     float bannerHeight;
     void Start()
     {
+        CheckSave();
+
         Time.timeScale = 1f;    // ensure not paused any more
     
         // 60 second sleep timeout
@@ -56,6 +66,34 @@ public class TitleScene : MonoBehaviour
         ));*/
        // image.DOFade(0, 0.75);
        DOVirtual.DelayedCall(0.25f, Animate);
+    }
+    void CheckSave()
+    {
+        if(PlayerPrefs.HasKey("wave"))
+        {
+            text_new.enabled = false;
+            text_continue.enabled = true;
+            text_reset.enabled = true;
+        }else{
+            text_new.enabled = true;
+            text_continue.enabled = false;
+            text_reset.enabled = false;
+        }
+    }
+    public void Reset()
+    {
+        TitleScene.cont = false;
+        PlayerPrefs.DeleteKey("wave");
+        CheckSave();
+    }
+    public void Continue()
+    {
+        TitleScene.cont = true;
+        LoadGame();
+    }
+    public void LoadGame()
+    {
+        SceneManager.LoadScene("Gameplay");
     }
     void Animate()
     {

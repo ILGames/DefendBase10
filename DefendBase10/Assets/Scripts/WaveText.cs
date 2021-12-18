@@ -10,16 +10,21 @@ public class WaveText : MonoBehaviour
     public string[] sentences;
     private int index;
 
-
+/*
     void Update()
     {
         if (sentences.Length>index)
         {
             textDisplay.text = sentences[index];
         }
-    }
-    public void ResetText()
+    }*/
+    public void Init(int start)
     {
-        index++;
+        index = start;
+    }
+    public void ResetText(int total)
+    {
+        //index++;
+        textDisplay.text = "Wave: " + System.Convert.ToString(total, 2);        
     }
 }
