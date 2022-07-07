@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44125694, g: 0.49004734, b: 0.5701064, a: 1}
+  m_IndirectSpecularColor: {r: 0.44125664, g: 0.4900465, b: 0.57010514, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -21440,7 +21440,7 @@ MonoBehaviour:
   tutorialHighlight: {fileID: 119107945}
   waves:
   - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
-    lengthOfTime: 16
+    lengthOfTime: 25
     level: 1
     digits: 1
     shipSpeed: 1
@@ -21460,7 +21460,7 @@ MonoBehaviour:
     isDialogue: 1
     dialogue: {fileID: 832184707}
   - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
-    lengthOfTime: 20
+    lengthOfTime: 25
     level: 4
     digits: 2
     shipSpeed: 1
@@ -21480,17 +21480,17 @@ MonoBehaviour:
     isDialogue: 0
     dialogue: {fileID: 0}
   - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
-    lengthOfTime: 16
+    lengthOfTime: 30
     level: 6
     digits: 3
     shipSpeed: 1
     cannonCooldown: 5
-    maxspawn: 5
+    maxspawn: 6
     minspawn: 5
     isDialogue: 1
     dialogue: {fileID: 1919463758}
   - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
-    lengthOfTime: 25
+    lengthOfTime: 30
     level: 7
     digits: 3
     shipSpeed: 1
@@ -21500,33 +21500,33 @@ MonoBehaviour:
     isDialogue: 0
     dialogue: {fileID: 0}
   - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
-    lengthOfTime: 20
+    lengthOfTime: 30
     level: 8
     digits: 4
     shipSpeed: 1
     cannonCooldown: 5
-    maxspawn: 3.8
-    minspawn: 2
+    maxspawn: 4
+    minspawn: 3
     isDialogue: 0
     dialogue: {fileID: 0}
   - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
-    lengthOfTime: 17
+    lengthOfTime: 30
     level: 9
     digits: 4
     shipSpeed: 1
     cannonCooldown: 5
-    maxspawn: 3.5
-    minspawn: 1.5
+    maxspawn: 4
+    minspawn: 3
     isDialogue: 0
     dialogue: {fileID: 0}
   - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
-    lengthOfTime: 15
+    lengthOfTime: 30
     level: 10
     digits: 4
     shipSpeed: 1
     cannonCooldown: 5
-    maxspawn: 2
-    minspawn: 1
+    maxspawn: 4
+    minspawn: 3
     isDialogue: 0
     dialogue: {fileID: 0}
   - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
@@ -21535,167 +21535,167 @@ MonoBehaviour:
     digits: 5
     shipSpeed: 1
     cannonCooldown: 5
-    maxspawn: 4
-    minspawn: 3.5
+    maxspawn: 6
+    minspawn: 5
     isDialogue: 0
     dialogue: {fileID: 0}
   - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
-    lengthOfTime: 25
+    lengthOfTime: 30
     level: 12
     digits: 5
     shipSpeed: 1
     cannonCooldown: 5
-    maxspawn: 3.8
-    minspawn: 3
+    maxspawn: 6
+    minspawn: 5
     isDialogue: 0
     dialogue: {fileID: 0}
   - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
-    lengthOfTime: 20
+    lengthOfTime: 30
     level: 13
     digits: 5
     shipSpeed: 1
     cannonCooldown: 5
-    maxspawn: 3.5
-    minspawn: 3.2
+    maxspawn: 6
+    minspawn: 5
     isDialogue: 0
     dialogue: {fileID: 0}
   - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
-    lengthOfTime: 17
+    lengthOfTime: 30
     level: 14
     digits: 5
     shipSpeed: 1
     cannonCooldown: 5
-    maxspawn: 3.3
-    minspawn: 3
+    maxspawn: 6
+    minspawn: 5
     isDialogue: 0
     dialogue: {fileID: 0}
   - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
-    lengthOfTime: 15
+    lengthOfTime: 30
     level: 15
     digits: 5
-    shipSpeed: 1
+    shipSpeed: 0.75
     cannonCooldown: 5
-    maxspawn: 3
-    minspawn: 2
+    maxspawn: 6
+    minspawn: 5
     isDialogue: 0
     dialogue: {fileID: 0}
   - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
-    lengthOfTime: 10
+    lengthOfTime: 30
     level: 16
     digits: 5
-    shipSpeed: 1
+    shipSpeed: 0.75
     cannonCooldown: 5
-    maxspawn: 2.5
-    minspawn: 2
+    maxspawn: 6
+    minspawn: 5
     isDialogue: 0
     dialogue: {fileID: 0}
   - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
     lengthOfTime: 30
     level: 17
     digits: 6
-    shipSpeed: 1
+    shipSpeed: 0.75
     cannonCooldown: 5
-    maxspawn: 5
-    minspawn: 4
+    maxspawn: 6
+    minspawn: 5
+    isDialogue: 0
+    dialogue: {fileID: 0}
+  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+    lengthOfTime: 30
+    level: 18
+    digits: 6
+    shipSpeed: 0.75
+    cannonCooldown: 5
+    maxspawn: 6
+    minspawn: 5
+    isDialogue: 0
+    dialogue: {fileID: 0}
+  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+    lengthOfTime: 30
+    level: 19
+    digits: 6
+    shipSpeed: 0.75
+    cannonCooldown: 5
+    maxspawn: 6
+    minspawn: 5
+    isDialogue: 0
+    dialogue: {fileID: 0}
+  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+    lengthOfTime: 30
+    level: 20
+    digits: 6
+    shipSpeed: 0.75
+    cannonCooldown: 5
+    maxspawn: 6
+    minspawn: 5
+    isDialogue: 0
+    dialogue: {fileID: 0}
+  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+    lengthOfTime: 30
+    level: 21
+    digits: 6
+    shipSpeed: 0.75
+    cannonCooldown: 5
+    maxspawn: 6
+    minspawn: 5
+    isDialogue: 0
+    dialogue: {fileID: 0}
+  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+    lengthOfTime: 30
+    level: 22
+    digits: 6
+    shipSpeed: 0.75
+    cannonCooldown: 5
+    maxspawn: 6
+    minspawn: 5
+    isDialogue: 0
+    dialogue: {fileID: 0}
+  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+    lengthOfTime: 30
+    level: 23
+    digits: 6
+    shipSpeed: 0.75
+    cannonCooldown: 5
+    maxspawn: 6
+    minspawn: 5
+    isDialogue: 0
+    dialogue: {fileID: 0}
+  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+    lengthOfTime: 30
+    level: 24
+    digits: 6
+    shipSpeed: 0.75
+    cannonCooldown: 5
+    maxspawn: 6
+    minspawn: 5
+    isDialogue: 0
+    dialogue: {fileID: 0}
+  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+    lengthOfTime: 30
+    level: 25
+    digits: 6
+    shipSpeed: 0.75
+    cannonCooldown: 5
+    maxspawn: 6
+    minspawn: 5
     isDialogue: 0
     dialogue: {fileID: 0}
   - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
     lengthOfTime: 25
-    level: 18
-    digits: 6
-    shipSpeed: 1
-    cannonCooldown: 5
-    maxspawn: 4.5
-    minspawn: 3.5
-    isDialogue: 0
-    dialogue: {fileID: 0}
-  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
-    lengthOfTime: 20
-    level: 19
-    digits: 6
-    shipSpeed: 1
-    cannonCooldown: 5
-    maxspawn: 4.2
-    minspawn: 3.2
-    isDialogue: 0
-    dialogue: {fileID: 0}
-  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
-    lengthOfTime: 20
-    level: 20
-    digits: 6
-    shipSpeed: 1
-    cannonCooldown: 5
-    maxspawn: 4
-    minspawn: 3
-    isDialogue: 0
-    dialogue: {fileID: 0}
-  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
-    lengthOfTime: 17
-    level: 21
-    digits: 6
-    shipSpeed: 1
-    cannonCooldown: 5
-    maxspawn: 3.5
-    minspawn: 3
-    isDialogue: 0
-    dialogue: {fileID: 0}
-  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
-    lengthOfTime: 15
-    level: 22
-    digits: 6
-    shipSpeed: 1
-    cannonCooldown: 5
-    maxspawn: 3.3
-    minspawn: 2.8
-    isDialogue: 0
-    dialogue: {fileID: 0}
-  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
-    lengthOfTime: 15
-    level: 23
-    digits: 6
-    shipSpeed: 1
-    cannonCooldown: 5
-    maxspawn: 3
-    minspawn: 2.5
-    isDialogue: 0
-    dialogue: {fileID: 0}
-  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
-    lengthOfTime: 13
-    level: 24
-    digits: 6
-    shipSpeed: 1
-    cannonCooldown: 5
-    maxspawn: 2.7
-    minspawn: 2.3
-    isDialogue: 0
-    dialogue: {fileID: 0}
-  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
-    lengthOfTime: 13
-    level: 25
-    digits: 6
-    shipSpeed: 1
-    cannonCooldown: 5
-    maxspawn: 2.4
-    minspawn: 1.7
-    isDialogue: 0
-    dialogue: {fileID: 0}
-  - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
-    lengthOfTime: 10
     level: 26
     digits: 6
-    shipSpeed: 1
+    shipSpeed: 0.75
     cannonCooldown: 5
-    maxspawn: 2
-    minspawn: 1
-    isDialogue: 1
+    maxspawn: 6
+    minspawn: 5
+    isDialogue: 0
     dialogue: {fileID: 0}
   - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
-    lengthOfTime: 10
+    lengthOfTime: 14
     level: 26
     digits: 6
-    shipSpeed: 1
+    shipSpeed: 0.75
     cannonCooldown: 5
-    maxspawn: 2
+    maxspawn: 1.3
     minspawn: 1
     isDialogue: 0
     dialogue: {fileID: 0}
