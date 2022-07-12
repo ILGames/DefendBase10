@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44125694, g: 0.49004734, b: 0.5701064, a: 1}
+  m_IndirectSpecularColor: {r: 0.44125664, g: 0.4900465, b: 0.57010514, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -21447,7 +21447,7 @@ MonoBehaviour:
     cannonCooldown: 5
     maxspawn: 5
     minspawn: 5
-    isDialogue: 0
+    isDialogue: 1
     dialogue: {fileID: 102504752}
   - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
     lengthOfTime: 20
@@ -21457,7 +21457,7 @@ MonoBehaviour:
     cannonCooldown: 4
     maxspawn: 6
     minspawn: 5
-    isDialogue: 0
+    isDialogue: 1
     dialogue: {fileID: 832184707}
   - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
     lengthOfTime: 20
@@ -21487,7 +21487,7 @@ MonoBehaviour:
     cannonCooldown: 5
     maxspawn: 6
     minspawn: 5
-    isDialogue: 0
+    isDialogue: 1
     dialogue: {fileID: 1919463758}
   - enemy: {fileID: 8743387523668677876, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
     lengthOfTime: 25
