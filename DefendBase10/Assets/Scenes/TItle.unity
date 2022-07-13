@@ -2237,9 +2237,9 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "        Important Little Games\n\nGame Design\n\tBobby Lockhart\n\n3D
-    Art\n\tDavid Mann\n\n2D Art\n\tGrace Culloton\n\nGame Programming\n\tElthon Alvarez\n\tMarko
-    Andreev\n\tBen Whititng\n\tBobby Lockhart\n\nMusic\n\tUntil I Sleep\n\tby Henry
-    Homesweet\n\n\tFuture Peace\n\tby Uuriter\n"
+    Art\n\tDavid Mann\n2D Art\n\tGrace Culloton\n\nGame Programming\n\tElthon Alvarez\n\tMarko
+    Andreev\n\tBen Whititng\n\tBobby Lockhart\n\tDevon McDonald\n\tMaxwell Woodruff\n\tRex
+    Krimm\nMusic\n\tUntil I Sleep\n\tby Henry Homesweet\n\n\tFuture Peace\n\tby Uuriter\n"
 --- !u!222 &1531165198
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2638,8 +2638,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 539.7067, y: 0}
-  m_SizeDelta: {x: 1079.4135, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 244.71667}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2138459632
 MonoBehaviour:
