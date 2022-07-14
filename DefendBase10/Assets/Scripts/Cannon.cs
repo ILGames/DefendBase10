@@ -91,8 +91,9 @@ public class Cannon : MonoBehaviour
             audioSource.clip = blastSound;
             audioSource.Play();
             StartCoroutine(waitBeam());
-            
-            KillShip(lowest);
+
+            KillShips();
+
 
             // TODO animate light intensity to make it flash
            AnimateLight();
@@ -148,6 +149,26 @@ public class Cannon : MonoBehaviour
     public void KillShip(GameObject ship)
     {
         ship.GetComponent<ShipDeath>().Die();
+    }
+
+    public void KillShips()
+    {
+        Debug.Log("killing ships");
+        GameObject thisShip;
+        RaycastHit[] hits;
+        hits = Physics.RaycastAll(pivot.transform.position, pivot.transform.up, 100000.0F);
+        Debug.Log("Ships in path? "+ hits.Length);
+        for (int i = 0; i<hits.Length; i++)
+        { 
+            if (hits[i].rigidbody)
+            {
+                thisShip = hits[i].transform.gameObject;
+                if (thisShip.tag == "Enemy")
+                {
+                    KillShip(thisShip);
+                }
+            }
+        }
     }
 
     IEnumerator DelayedHide()

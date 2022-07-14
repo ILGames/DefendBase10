@@ -1525,6 +1525,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1694374868, guid: a8cbfb1e6dcd03b41a6edcca07e761d3, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2538509229082381893, guid: a8cbfb1e6dcd03b41a6edcca07e761d3,
         type: 3}
       propertyPath: m_RootOrder
@@ -1550,6 +1554,11 @@ PrefabInstance:
       propertyPath: _frame
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4405591877587702422, guid: a8cbfb1e6dcd03b41a6edcca07e761d3,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4574922135750020050, guid: a8cbfb1e6dcd03b41a6edcca07e761d3,
         type: 3}
       propertyPath: m_RootOrder
@@ -1573,6 +1582,26 @@ PrefabInstance:
     - target: {fileID: 5861651458299482366, guid: a8cbfb1e6dcd03b41a6edcca07e761d3,
         type: 3}
       propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6142606599847524945, guid: a8cbfb1e6dcd03b41a6edcca07e761d3,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 220
+      objectReference: {fileID: 0}
+    - target: {fileID: 6142606599847524945, guid: a8cbfb1e6dcd03b41a6edcca07e761d3,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 6142606599847524945, guid: a8cbfb1e6dcd03b41a6edcca07e761d3,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 220
+      objectReference: {fileID: 0}
+    - target: {fileID: 6142606599847524945, guid: a8cbfb1e6dcd03b41a6edcca07e761d3,
+        type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6339330453244642782, guid: a8cbfb1e6dcd03b41a6edcca07e761d3,
@@ -6061,7 +6090,6 @@ GameObject:
   - component: {fileID: 727978891}
   - component: {fileID: 727978890}
   - component: {fileID: 727978889}
-  - component: {fileID: 727978888}
   m_Layer: 0
   m_Name: Beam
   m_TagString: Untagged
@@ -6084,29 +6112,6 @@ Transform:
   m_Father: {fileID: 644034164}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.16700001}
---- !u!114 &727978888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 727978886}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f18c36ee86da3548ba8ecc972a12aa4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawner: {fileID: 0}
-  pivot: {fileID: 0}
-  startWait: 2
-  fireWait: 5
-  beamWait: 0.5
-  bar: {fileID: 0}
-  Beam: {fileID: 0}
-  BeamLight: {fileID: 0}
-  blastSound: {fileID: 0}
-  deploySound: {fileID: 0}
-  collapseSound: {fileID: 0}
 --- !u!136 &727978889
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6115,9 +6120,9 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 727978886}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 0
-  m_Radius: 0.5000001
+  m_Radius: 0.8
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}

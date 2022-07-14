@@ -24,6 +24,10 @@ public class ShipDeath : MonoBehaviour
 
     public void Die()
     {
+        if (dying)
+        {
+            return;
+        }
         dying = true;
         StartCoroutine(destroySelf());
         gameObject.GetComponent<FallScript>().enabled = false;
@@ -64,4 +68,5 @@ public class ShipDeath : MonoBehaviour
         yield return new WaitForSeconds(2f);
         Destroy(gameObject);
     }
+
 }
